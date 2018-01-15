@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<!-- http://www.xiper.net/manuals/css/charset.html -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Краткий справочник CSS</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script>
+function Click(ob){
+ var o = ob.nextSibling;
+ while(o.nodeType!=1) o=o.nextSibling;
+ if(o.style.display!="block"){o.style.display="block";ob.style.cursor="pointer";}else{o.style.display="none";ob.style.cursor="help";}
+}
+</script>
+<style type="text/css" />
+.show {color:darkred;cursor:help}
+.show .show {color:green}
+H4 {margin-left:4em}
+@media screen{
+PRE,DIV {display:none}
+PRE {position:relative;left:4em;margin-top:0mm}
+DIV PRE {display:block}
+}
+@media print {
+    BODY {font-family: Times, 'Times New Roman', serif; /* Шрифт с засечками */ }
+    H1, H2, P {color: #000; /* Черный цвет текста */ }
+   }
+@page:first {margin: 1cm;}
+@page:left {margin: 1cm 3cm 1cm 1.5cm;}
+@page:right {margin: 1cm 3cm 1cm 1.5cm;}
+</style>
+</head>
+<body>
+<h1>Краткий справочник CSS</h1>
+<div>Перед вами краткий справочник по языку CSS (Cascading Style Sheets).
+Справочник базируется на спецификации CSS 2.1 - это наиболее актуальная сейчас версия CSS.</div>
+
+<h3 class="show" onclick="Click(this)">!important</h3>
+<div>Правило !important (важно) — это способ сделать правила, которые должны реагировать одинаково независимо о того, в какой части документа оно применяется (т.е. имеет приоритет над каскадностью и правилами наследования). Например, нужно задать чтобы цвет ссылок в любой части документа был красным. Для этого в начале CSS-файла достаточно прописать:
+<code>a {color: red !important;}</code></div>
+<h3 class="show" onclick="Click(this)">@charset</h3>
+<div>Применяется для задания кодировки внешнего CSS-файла. Это имеет значение в том случае, если в CSS-файле используются символы национального алфавита.<br><code>@charset "UTF-8";</code></div>
+<h3 class="show" onclick="Click(this)">@font-face</h3>
+<div>Определяет настройки шрифтов, а также позволяет загрузить специфичный шрифт на компьютер пользователя.
+<br><code>@font-face {font-family:"Segoe UI";src: url(http://www.domain.com/fonts/SegoeUI.ttf);
+}</code> 
+</div>
+<h3 class="show" onclick="Click(this)">@import</h3>
+<div>Позволяет импортировать содержимое CSS-файла в текущую стилевую таблицу.</div>
+<h3 class="show" onclick="Click(this)">@keyframes</h3>
+<div>Правило @keyframes — позволяет пользователю описать анимацию CSS свойств в виде перечня ключевых кадров.
+<code>@keyframes <имя анимации> {<br/>
+    <селектор кадра 1> {<br/>
+	<свойство 1>:<значение 1>;<br/>
+	<свойство 2>:<значение 1>;<br/>
+    }<br/>
+    <селектор кадра 2> {<br/>
+	<свойство 1>:<значение 2>;<br/>
+	<свойство 2>:<значение 2>;<br/>
+    }<br/>
+    .....................<br/>
+    <селектор кадра n> {<br/>
+	<свойство 1>:<значение n>;<br/>
+	<свойство 2>:<значение n>;<br/>
+    }<br/>
+}<br/>
+</code>
+</div>
+<h3 class="show" onclick="Click(this)">@media</h3>
+<div>Указывает тип носителя, для которого будет применяться указанный стиль. В качестве типов выступают различные устройства, например, принтер, коммуникатор, монитор и др.
+<code><br>
+@media тип устройства 1[, тип устройства 2] {<br>
+описание CSS свойств<br>
+}</code></div>
+<h3 class="show" onclick="Click(this)">@page</h3>
+<div>Задает значение полей при печати документа. Пример:
+<pre>
+@page:first {margin: 1cm;}
+@page:left {margin: 1cm 3cm 1cm 1.5cm;}
+@page:right {margin: 1cm 3cm 1cm 1.5cm;}
+</pre>
+</div>
+<h3 class="show" onclick="Click(this)">CSS свойства</h3>
+<div>
+<h4 class="show" onclick="Click(this)">a</h4>
+<pre>
+animation
+animation-delay
+animation-direction
+animation-duration
+animation-iteration-count
+animation-name
+animation-play-state
+animation-timing-function
+appearance
+azimuth
+</pre>
+<h4 class="show" onclick="Click(this)">b</h4>
+<pre>
+backface-visibility
+background
+background-attachment
+background-clip
+background-color
+background-image
+background-origin
+background-position
+background-repeat
+background-size
+border
+border-bottom
+border-bottom-color
+border-bottom-left-radius
+border-bottom-right-radius
+border-bottom-style
+border-bottom-width
+border-collapse
+border-color
+border-image
+border-image-outset
+border-image-repeat
+border-image-slice
+border-image-source
+border-image-width
+border-left
+border-left-color
+border-left-style
+border-left-width
+border-radius
+border-right
+border-right-color
+border-right-style
+border-right-width
+border-spacing
+border-style
+border-top
+border-top-color
+border-top-left-radius
+border-top-right-radius
+border-top-style
+border-top-width
+border-width
+bottom
+box-shadow
+box-sizing
+break-after
+break-before
+break-inside
+</pre>
+<h4 class="show" onclick="Click(this)">c</h4>
+<pre>
+caption-side
+clear
+clip
+color
+column-count
+column-gap
+column-rule
+column-rule-color
+column-rule-style
+column-rule-width
+column-span
+column-width
+columns
+content
+counter-increment
+counter-reset
+cue
+cue-after
+cue-before
+cursor
+</pre>
+<h4 class="show" onclick="Click(this)">de</h4>
+<pre>
+direction
+display
+elevation
+empty-cells
+</pre>
+<h4 class="show" onclick="Click(this)">fh</h4>
+<pre>
+float
+font
+font-family
+font-size
+font-size-adjust
+font-stretch
+font-style
+font-variant
+font-weight
+height
+</pre>
+<h4 class="show" onclick="Click(this)">l</h4>
+<pre>
+left
+letter-spacing
+line-height
+list-style
+list-style-image
+list-style-position
+list-style-type
+</pre>
+<h4 class="show" onclick="Click(this)">m</h4>
+<pre>
+margin
+margin-bottom
+margin-left
+margin-right
+margin-top
+marquee-direction
+marquee-play-count
+marquee-speed
+marquee-style
+max-height
+max-width
+min-height
+min-width
+</pre>
+<h4 class="show" onclick="Click(this)">n</h4>
+<pre>
+nav-down
+nav-index
+nav-left
+nav-right
+nav-up
+</pre>
+<h4 class="show" onclick="Click(this)">o</h4>
+<pre>
+opacity
+orphans
+outline
+outline-color
+outline-offset
+outline-style
+outline-width
+overflow
+overflow-x
+overflow-y
+</pre>
+<h4 class="show" onclick="Click(this)">p</h4>
+<pre>
+padding
+padding-bottom
+padding-left
+padding-right
+padding-top
+page-break-after
+page-break-before
+page-break-inside
+pause
+pause-after
+pause-before
+perspective
+perspective-origin
+pitch
+pitch-range
+play-during
+position
+</pre>
+<h4 class="show" onclick="Click(this)">qr</h4>
+<pre>
+quotes
+resize
+richness
+right
+</pre>
+<h4 class="show" onclick="Click(this)">s</h4>
+<pre>
+speak
+speak-header
+speak-numeral
+speak-punctuation
+speech-rate
+src
+stress
+</pre>
+<h4 class="show" onclick="Click(this)">t</h4>
+<pre>
+table-layout              auto fixed inherit
+text-align
+text-decoration
+text-indent
+text-overflow
+text-shadow
+text-transform
+top
+transform
+transform-origin
+transform-style
+transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function
+</pre>
+<h4 class="show" onclick="Click(this)">uvw</h4>
+<pre>
+unicode-bidi
+unicode-range
+vertical-align
+visibility
+voice-family
+volume
+white-space
+widows
+width
+word-spacing
+word-wrap
+z-index
+</pre>
+</div>
+
+<h3 class="show" onclick="Click(this)">Комментарии в CSS</h3>
+<div>
+Комментарии в CSS, также как и в любых других программных кодах, для комментирования участков кода: секций или отдельных свойств. Это делает код более понятным, что позволяет несколько сократить время разработки и отладки файлов стилей.
+<code>/*...*/</code>
+</div>
+<h3 class="show" onclick="Click(this)">Псевдоклассы</h3>
+<pre>
+:active
+:checked
+:default
+:disabled
+:empty
+:enabled
+:first-child
+:first-of-type
+:focus
+:hover
+:in-range
+:invalid
+:lang
+:last-child
+:last-of-type
+:link
+:not
+:nth-child
+:nth-last-child
+:nth-last-of-type
+:nth-of-type
+:only-child
+:only-of-type
+:optional
+:out-of-range
+:read-only
+:read-write	
+:required
+:root
+:target
+:valid
+:visited
+</pre>
+<h3 class="show" onclick="Click(this)">Псевдоэлементы</h3>
+<pre>
+:after
+:before
+:first-letter
+:first-line
+</pre>	
+
+
+</body>
+</html>

@@ -1,0 +1,760 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<meta http-equiv="Content-Language" content="ru">
+<meta http-equiv="Cache-Control" content="private">
+<meta http-equiv="Pragma" content="no-cache">
+<meta name="keywords" content="php, скрипты php, скачать php, download, скрипты, программирование, mysql, php mysql, apache, сайт php, php apache, установка php, php учебники, форум, форум php, функции php, php5, php6, изучение php, веб-технологии">
+<meta http-equiv="Keywords" content="php, скрипты php, скачать php, download, скрипты, программирование, mysql, php mysql, apache, сайт php, php apache, установка php, php учебники, форум, форум php, функции php, php5, php6, изучение php, веб-технологии">
+<meta name="description" content="Портал по PHP, MySQL и другим веб-технологиям, Форум PHP программистов">
+<meta http-equiv="description" content="Портал по PHP, MySQL и другим веб-технологиям, Форум PHP программистов">
+<meta name="Resource-type" content="document">
+<meta name="Robots" content="index,follow">
+<title>PHP.SU - Функции PHP</title>
+<link href="PHPmysql_files/main.css" type="text/css" rel="stylesheet">
+<script src="PHPmysql_files/all.js" id="facebook-jssdk"></script><script type="text/javascript" src="PHPmysql_files/openapi.js"></script>
+<script type="text/javascript">
+  VK.init({apiId: 2254330, onlyWidgets: true});
+</script>
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+.fbpluginrecommendationsbarleft{left:10px}
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body>
+<div align="center">
+<!--Header-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" height="70" width="950">
+<tbody><tr>
+<td class="backgroundlogo" align="left" width="200">
+<div style="float:left">
+<a href="http://www.persfit.com/" title="PersFit" target="persfit">
+<img src="PHPmysql_files/logo2.png" alt="PersFit" width="140">
+</a>
+</div>
+<div style="width:350px;text-align:center;margin:0 auto">
+Много работаешь за компьютером?<br>
+Тебе необходимо делать периодически зарядку.<br>
+Нет времени? Лень? Не можешь себя заставить?<br>
+<b>Хватит откладывать свое здоровье на потом!</b><br>
+</div>
+<div style="text-align:right;margin:-25px 10px 0">
+<a id="logo" href="http://www.persfit.com/" title="Подробнее" target="persfit">
+<img src="PHPmysql_files/forward_blue.png" alt="Подробнее">
+</a>
+</div>
+<!--
+<form action="/search/" method="get" target="_blank" style="margin:1">
+<span class="mtx1">Поиск:</span>&nbsp;<input type="text" name="q" style="border:#999999 1px solid; background:#F9FCFF">
+<input type="submit" class="navbutton" value="Найти!">&nbsp;&nbsp;&nbsp;</form>
+-->
+</td>
+<td class="backgroundlogo" align="right" valign="middle" width="20%">
+<p class="phpsulogo">
+  <a href="http://forum.php.su/" style="text-decoration:none" title="Форум портала PHP.SU"><span class="xq2">FORUM<span class="xq2">.</span></span><span class="xq1">PHP</span><span class="xq2">.</span><span class="xq3">SU</span></a>&nbsp;&nbsp;
+</p>
+</td>
+</tr>
+</tbody></table>
+<!-- End of Header-->
+<!-- Menu -->
+<!-- Header Menu -->
+<table border="0" cellpadding="1" cellspacing="0" width="950">
+  <tbody><tr>
+    <td bgcolor="#EBEBEB">
+      <table align="left" border="0" cellpadding="3" cellspacing="1" width="950">
+        <tbody><tr>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/">&nbsp;&nbsp;Главная&nbsp;&nbsp;</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/articles/">&nbsp;&nbsp;Статьи&nbsp;&nbsp;</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/learnphp/">Изучение PHP</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/functions/">Функции PHP</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/faq/">FAQ</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/scripts/">PHP скрипты</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/mysql/">MySQL</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/prepare/">Установка</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/books/">Учебники</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/lessons/" title="Уроки на основе обсуждений форума">Уроки</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://www.php.su/download/">Download</a></b></span>
+          </td>
+          <td class="nav" align="center" background="PHPmysql_files/hdrm.gif">
+            <span class="navText"><b><a href="http://forum.php.su/" title="Форумы портала PHP.SU">&nbsp;&nbsp;Форум&nbsp;&nbsp;</a></b></span>
+          </td>
+        </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<!--End of Header Menu-->
+<br>
+<!--Global table of content-->
+<table bgcolor="#D7EAF7" border="0" cellpadding="0" cellspacing="0" width="950">
+  <tbody><tr>
+    <td valign="top" width="150">
+      <table border="0" cellpadding="0" cellspacing="0" width="150">
+        <tbody><tr>
+          <td bgcolor="#ffffff">
+            <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+              <tbody><tr class="bg2">
+                <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/php/" style="color:#FFFFFF">Основы PHP</a></span></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/php/?php">&nbsp;&nbsp;<span class="navText2">Что такое PHP?</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/php/?can">&nbsp;&nbsp;<span class="navText2">Возможности PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/php/?opport">&nbsp;&nbsp;<span class="navText2">Преимущества PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/php/?history">&nbsp;&nbsp;<span class="navText2">История развития</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/php/?php5">&nbsp;&nbsp;<span class="navText2">Что нового в PHP5?</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/php/?php5">&nbsp;&nbsp;<span class="navText2">«Движок» PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/php/?migration53"><span class="navText2">Переход на PHP 5.3</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/php/intro/">&nbsp;&nbsp;<span class="navText2">Введение в PHP</span></a></td>
+              </tr>
+            </tbody></table>
+            <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+              <tbody><tr class="bg2">
+                <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad" width="145">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/learnphp/" style="color:#FFFFFF">Изучение PHP</a></span></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/cgi/">&nbsp;&nbsp;<span class="navText2">Основы CGI</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/?syntax">&nbsp;&nbsp;<span class="navText2">Синтаксис PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/datatypes/">&nbsp;&nbsp;<span class="navText2">Типы данных PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/vars/">&nbsp;&nbsp;<span class="navText2">Переменные в PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/?const">&nbsp;&nbsp;<span class="navText2">Константы PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/?expressions">&nbsp;&nbsp;<span class="navText2">Выражения PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/operators/">&nbsp;&nbsp;<span class="navText2">Операторы PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/cs/">&nbsp;&nbsp;<span class="navText2">Конструкции PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/?re">&nbsp;&nbsp;<span class="navText2">Ссылки в PHP</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/learnphp/phpoo/">&nbsp;&nbsp;<span class="navText2">PHP и ООП</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/security/">&nbsp;&nbsp;<span class="navText2">Безопасность</span></a></td>
+              </tr>
+            </tbody></table>
+            <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+              <tbody><tr class="bg2">
+                <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/functions/" style="color:#FFFFFF">Функции PHP</a></span></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/functions/?page=cat">&nbsp;&nbsp;<span class="navText2">Функции по категориям</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/functions/?page=abc">&nbsp;&nbsp;<span class="navText2">Функции по алфавиту</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/functions/?page=standard">&nbsp;&nbsp;<span class="navText2">Стандартные функции</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/functions/custom/">&nbsp;&nbsp;<span class="navText2">Пользовательские</span></a></td>
+              </tr>
+            </tbody></table>
+            <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+              <tbody><tr class="bg2">
+                <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/phphttp/" style="color:#FFFFFF">PHP и HTTP</a></span></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/phphttp/forms/">&nbsp;&nbsp;<span class="navText2">Работа с формами</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/phphttp/?uploads">&nbsp;&nbsp;<span class="navText2">PHP и Upload</span></a></td>
+              </tr>
+              <tr class="bg2">
+                <td class="bg"><a href="http://www.php.su/phphttp/?cookies">&nbsp;&nbsp;<span class="navText2">PHP и Cookies</span></a></td>
+              </tr>
+            </tbody></table>
+          <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+            <tbody><tr class="bg2">
+              <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/phpdb/" style="color:#FFFFFF">PHP и базы данных</a></span></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/mysql/">&nbsp;&nbsp;<span class="navText2">PHP и MySQL</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/mysql/manual/">&nbsp;&nbsp;<span class="navText2">Документация MySQL</span></a></td>
+            </tr>
+          </tbody></table>
+          <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+            <tbody><tr class="bg2">
+              <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/books/" style="color:#FFFFFF">Учебники</a></span></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/books/?php">&nbsp;&nbsp;<span class="navText2">Учебники по PHP</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/books/?mysql">&nbsp;&nbsp;<span class="navText2">Учебники по MySQL</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/books/">&nbsp;&nbsp;<span class="navText2">Другие учебники</span></a></td>
+            </tr>
+          </tbody></table>
+
+          <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+            <tbody><tr class="bg2">
+              <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/lessons/" style="color:#FFFFFF">Уроки PHP</a></span></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_0">&nbsp;&nbsp;<span class="navText2">Введение</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_1">&nbsp;&nbsp;<span class="navText2">Самые основы</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_2">&nbsp;&nbsp;<span class="navText2">Управление</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_3">&nbsp;&nbsp;<span class="navText2">Функции</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_4">&nbsp;&nbsp;<span class="navText2">Документация</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_5">&nbsp;&nbsp;<span class="navText2">Математика</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_8">&nbsp;&nbsp;<span class="navText2">Файлы</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_9">&nbsp;&nbsp;<span class="navText2">Основы SQL</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_10">&nbsp;&nbsp;<span class="navText2">Дата и время</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_11">&nbsp;&nbsp;<span class="navText2">CURL</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_12">&nbsp;&nbsp;<span class="navText2">Изображения</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_13">&nbsp;&nbsp;<span class="navText2">Стили</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_14">&nbsp;&nbsp;<span class="navText2">Безопасность</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_15">&nbsp;&nbsp;<span class="navText2">Установка</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_16">&nbsp;&nbsp;<span class="navText2">Проектирование БД</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/lessons/?lesson_17">&nbsp;&nbsp;<span class="navText2">Регулярные выражения</span></a></td>
+            </tr>
+          </tbody></table>
+
+          <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+            <tbody><tr class="bg2">
+              <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/prepare/" style="color:#FFFFFF">Подготовка к работе</a></span></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/prepare/">&nbsp;&nbsp;<span class="navText2">Быстрый старт</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/prepare/?install_apache_php">&nbsp;&nbsp;<span class="navText2">Установка PHP</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/prepare/?install_mysql">&nbsp;&nbsp;<span class="navText2">Установка MySQL</span></a></td>
+            </tr>
+            <tr class="bg2">
+              <td class="bg"><a href="http://www.php.su/prepare/?phpini">&nbsp;&nbsp;<span class="navText2">Конфигурация PHP</span></a></td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </tbody></table>
+    <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+      <tbody><tr class="bg2">
+        <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/download/" style="color:#FFFFFF">Download / Скачать</a></span></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/download/?apache">&nbsp;&nbsp;<span class="navText2">Скачать Apache</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/download/?php">&nbsp;&nbsp;<span class="navText2">Скачать PHP</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/download/?pecl">&nbsp;&nbsp;<span class="navText2">Скачать PECL</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/download/?pear">&nbsp;&nbsp;<span class="navText2">Скачать PEAR</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/download/?mysql">&nbsp;&nbsp;<span class="navText2">Скачать MySQL</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/download/editors/">&nbsp;&nbsp;<span class="navText2">Редакторы PHP</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/download/utilites/">&nbsp;&nbsp;<span class="navText2">Полезные утилиты</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/download/?docs">&nbsp;&nbsp;<span class="navText2">Документация</span></a></td>
+      </tr>
+    </tbody></table>
+    <table bordercolorlight="#CCCCCC" border="1" cellpadding="1" cellspacing="0" width="150">
+      <tbody><tr class="bg2">
+        <td background="PHPmysql_files/nmdr.gif" bgcolor="#2170ad">&nbsp;&nbsp;<span class="text2"><a href="http://www.php.su/scripts/" style="color:#FFFFFF">PHP скрипты</a></span></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/scripts/?download">&nbsp;&nbsp;<span class="navText2">Скачать скрипты</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/instruments/">&nbsp;&nbsp;<span class="navText2">Инструменты</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/articles/?cat=examples">&nbsp;&nbsp;<span class="navText2">PHP в примерах</span></a></td>
+      </tr>
+      <tr class="bg2">
+        <td class="bg"><a href="http://www.php.su/news/">&nbsp;&nbsp;<span class="navText2">Новости портала</span></a></td>
+      </tr>
+    </tbody></table>
+  </td>
+  <!--End of Main Menu--><!--End of Menu-->
+<!--MM Spacer-->
+<td bgcolor="#ffffff" width="10"></td>
+<!-- End of MM Spacer-->
+<td bgcolor="#ffffff" valign="top" width="790">
+<!--Main Content-->
+<!--TBL_HAT-->
+<table bordercolorlight="#CCCCCC" bordercolordark="#FFFFFF" border="0" cellpadding="1" cellspacing="0" width="100%">
+<tbody><tr>
+<td background="PHPmysql_files/ndrs.gif" bgcolor="#4D7CCC" height="8">
+  <span class="hats">
+    &nbsp;<a href="http://www.php.su/" title="Портал PHP.SU">Главная</a>
+&nbsp;&nbsp;»&nbsp;&nbsp;<a href="http://www.php.su/functions/" title="Функции PHP">Функции PHP</a>  </span>
+</td>
+</tr>
+</tbody></table>
+<!--END OF TBL_HAT-->
+<table bgcolor="#4D7CCC" border="0" cellpadding="5" cellspacing="1" width="100%">
+<tbody><tr>
+<td bgcolor="#F7F7F7" height="1242" valign="top">
+<index>
+<!--CONTENT_OF_PAGE-->
+
+
+<a style="font-size:4px">&nbsp;</a><br>
+<a style="font-size:1px">&nbsp;</a><br>
+<div><a name="/functions/mysql"></a><div><h1 style="font-size:16px;color:green">Функции СУБД MySQL</h1>
+<div class="mtx4"><a name="AEN95100"></a><div><h1 style="font-size:14px;color:blue"><a name="mysql.intro">Введение</a></h1><p>     Расширение позволяет вам работать с СУБД MySQL.
+     За информацией о MySQL обращайтесь к <a href="http://www.mysql.com/" target="_top">http://www.mysql.com/</a>.
+    </p><p>     Документация MySQL находится по адресу <a href="http://dev.mysql.com/doc/" target="_top">http://dev.mysql.com/doc/</a>.
+    </p></div><div><h1 style="font-size:14px;color:blue"><a name="mysql.requirements">Требования</a></h1><p>     Чтобы работать с функциями, вы должны скомпилировать PHP с поддержкой
+     MySQL.
+    </p></div><div><h1 style="font-size:14px;color:blue"><a name="mysql.installation">Установка</a></h1><p>  Используя директиву <var>--with-mysql[=DIR]</var>
+  вы можете включить в <var>PHP</var> поддержку СУБД MySQL.
+ </p><p>  В PHP 4, директива <var>--with-mysql</var>
+  включена по умолчанию. Чтобы отключить её, используйте директиву
+  конфигурации  <var>--without-mysql</var>.  
+  Кроме того, в PHP 4, при включении директивы без указания пути к папке установки
+  MySQL, <var>PHP</var> будет использовать встроенную библиотеку
+  MySQL-клиента. В Windows специальные DLL отсутствуют, клиент всегда встроен
+  в PHP4.
+  При использовании приложений использующих MySQL (к примеру, auth-mysql) не
+  стоит использовать встроенную библиотеку -- укажите путь к папке установки
+  MySQL, что будет выглядеть примерно так: <var>--with-mysql=/path/to/mysql</var>.
+  Это заставит <var>PHP</var> использовать библиотеку, установленную MySQL,
+  что позволит избежать любых конфликтов.
+ </p><p>  В PHP 5 поддержка MySQL больше не включена по умолчанию, кроме того в нём
+  отсутствует встроенная библиотека-клиент. Подробнее о причине можно
+  прочитать в <strong>FAQ</strong>.
+ </p>
+ <p>  Расширение работает с MySQL версий &gt;= 4.1.0, но не эксплуатирует
+  всю возможную функциональность этих версий.
+  Для этого используйте <a href="http://www.php.su/functions/?cat=mysqli/">MySQLi</a>.
+ </p>
+ <div class="mtx4"><p></p><table class="mtx4" bgcolor="#FFFFCC" border="1" cellpadding="3" cellspacing="0" width="100%"><tbody><tr><td align="CENTER"><b>Внимание</b></td></tr><tr><td align="LEFT"><p>   Сбои в работе <var>PHP</var> могут иметь место при загрузке
+   совместно этого расширения и расширения для работы с библиотекой GNU Recode.
+   За дополнительной информацией обращайтесь к разделу о расширении для <a href="http://www.php.su/functions/?cat=recode/">recode</a>.
+  </p></td></tr></tbody></table></div><div><blockquote><p><b>Замечание: </b>
+   Если вам требуется поддержка кодировок (отличных от <span><i>latin</i></span>, установленной по умолчанию), 
+   вам придётся установить внешнюю библиотеку, скомпилированную с их
+   поддержкой.
+  </p></blockquote></div></div><div><h1 style="font-size:14px;color:blue"><a name="mysql.configuration">Настройка во время выполнения</a></h1><p>Поведение этих функций зависит от установок в <tt>php.ini</tt>.
+</p><p>  </p><div class="mtx1"><a name="AEN95137"></a><p><b>Таблица 1. Директивы конфигурации MySQL</b></p><table class="mtx4" border="1" cellpadding="3" cellspacing="0"><colgroup><col><col><col></colgroup><thead><tr><th>Имя</th><th>Значение по умолчанию</th><th>Область изменения</th></tr></thead><tbody><tr><td>mysql.allow_persistent</td><td>"On"</td><td>PHP_INI_SYSTEM</td></tr><tr><td>mysql.max_persistent</td><td>"-1"</td><td>PHP_INI_SYSTEM</td></tr><tr><td>mysql.max_links</td><td>"-1"</td><td>PHP_INI_SYSTEM</td></tr><tr><td>mysql.default_port</td><td>NULL</td><td>PHP_INI_ALL</td></tr><tr><td>mysql.default_socket</td><td>NULL</td><td>PHP_INI_ALL</td></tr><tr><td>mysql.default_host</td><td>NULL</td><td>PHP_INI_ALL</td></tr><tr><td>mysql.default_user</td><td>NULL</td><td>PHP_INI_ALL</td></tr><tr><td>mysql.default_password</td><td>NULL</td><td>PHP_INI_ALL</td></tr><tr><td>mysql.connect_timeout</td><td>"0"</td><td>PHP_INI_SYSTEM</td></tr></tbody></table></div>
+  За дальнейшей информацией и значениями PHP_INI_* констант обращайтесь к
+  <a href="http://www.php.su/functions/?ini-set"><b>ini_set()</b></a>.
+<p></p><p>Краткое разъяснение конфигурационных
+директив.</p><p> </p><p></p><div class="mtx4"><dl><dt><a name="ini.mysql.allow-persistent"></a><var>mysql.allow_persistent</var>
+    логическое</dt><dd><p>     Позволять ли 
+        <em>постоянные соединения</em>
+     с MySQL.
+    </p>
+    </dd><dt><a name="ini.mysql.max-persistent"></a><var>mysql.max_persistent</var>
+    целое</dt><dd><p> 
+     Максимальное количество постоянных соединений на один процесс.
+    </p></dd><dt><a name="ini.mysql.max-links"></a><var>mysql.max_links</var>
+    целое</dt><dd><p>     Максимальное количество соединений с MySQL на один процесс, включая
+     постоянные соединения.
+    </p></dd><dt><a name="ini.mysql.default-port"></a><var>mysql.default_port</var>
+    строка</dt><dd><p>     TCP-порт, используемый для соединения с базой данных по умолчанию (если
+     не был указан другой). Если эта директива опущена, порт будет взят из
+     переменной среды <var>MYSQL_TCP_PORT</var>, значения 
+     <var>mysql-tcp</var> в <tt>/etc/services</tt> или константы
+     <var>MYSQL_PORT</var>, указанной при компиляции, в указанном порядке. 
+     Win32 использует только константу <var>MYSQL_PORT</var>.
+    </p></dd><dt><a name="ini.mysql.default-socket"></a><var>mysql.default_socket</var>
+    строка</dt><dd><p>     Тип сокета, используемого для соединения с локальной базой данных, если не
+     был указан другой.
+    </p></dd><dt><a name="ini.mysql.default-host"></a><var>mysql.default_host</var>
+    строка</dt><dd><p>     Адрес сервера, используемый для соединения с базой данных, если не указан
+     другой. Не работает в 
+     <a href="http://www.php.su/security/?safemode">безопасном режиме</a>.
+    </p>
+    </dd><dt><a name="ini.mysql.default-user"></a><var>mysql.default_user</var>
+    строка</dt><dd><p>     Имя пользователя, используемое для соединения с базой данных, если не
+     указано другое. Не работает в 
+     <a href="http://www.php.su/security/?safemode">безопасном режиме</a>.
+    </p>
+    </dd><dt><a name="ini.mysql.default-password"></a><var>mysql.default_password</var>
+    строка</dt><dd><p>     Пароль, используемый для соединения с базой данных, если не указан
+     другой. Не работает в
+     <a href="http://www.php.su/security/?safemode">безопасном режиме</a>.
+    </p>
+    </dd><dt><a name="ini.mysql.connect-timeout"></a><var>mysql.connect_timeout</var>
+    целое</dt><dd><p>     Время ожидания овета до разрыва соединения в секундах. Linux также использует это значение 
+     при ожидании первого ответа от сервера.
+    </p></dd></dl></div>
+ <p></p></div><div><h1 style="font-size:14px;color:blue"><a name="mysql.resources">Типы ресурсов</a></h1><p>     Модуль MySQL исползует два дополнительных типа указателей. Первый
+     является указателем на соединение с базой данных, второй указывает на
+     ресурс, содержащий результат запроса.
+    </p></div><div><h1 style="font-size:14px;color:blue"><a name="mysql.constants">Предопределенные константы</a></h1><p>Перечисленные ниже константы определены данным расширением и могут быть
+доступны только в том случае, если PHP был собран с
+поддержкой этого расширения или же в том случае, если
+данное расширение подгружается во время выполнения.
+</p><p>  Начиная с PHP 4.3.0 можно указать дополнительные флаги для функций
+  <a href="http://www.php.su/functions/?mysql-connect"><b>mysql_connect()</b></a> и <a href="http://www.php.su/functions/?mysql-pconnect"><b>mysql_pconnect()</b></a>
+  functions. Предопределены следующие константы:
+  </p><div class="mtx1"><a name="AEN95258"></a><p><b>Таблица 2. MySQL константы</b></p><table class="mtx4" border="1" cellpadding="3" cellspacing="0"><colgroup><col><col></colgroup><thead><tr><th>константа</th><th>описание</th></tr></thead><tbody><tr><td>MYSQL_CLIENT_COMPRESS</td><td>использовать протокол сжатия</td></tr><tr><td>MYSQL_CLIENT_IGNORE_SPACE</td><td>Позволяет вставлять пробелы после имён функций</td></tr><tr><td>MYSQL_CLIENT_INTERACTIVE</td><td>Ждать interactive_timeout секунд (виесто wait_timeout)
+        бездействия, до закрытия соединения.</td></tr></tbody></table></div>
+ <p></p><p>  Функция <a href="http://www.php.su/functions/?mysql-fetch-array"><b>mysql_fetch_array()</b></a> использует константы для
+  определения типа возвращаемого массива. Предопределены следующие константы:
+  </p><div class="mtx1"><a name="AEN95277"></a><p><b>Таблица 3. Константы выборки MySQL</b></p><table class="mtx4" border="1" cellpadding="3" cellspacing="0"><colgroup><col><col></colgroup><thead><tr><th>константа</th><th>описание</th></tr></thead><tbody><tr><td>MYSQL_ASSOC</td><td>       Результат возвращается в ассоциативном массиве с индексами под именами
+       колонок.
+      </td></tr><tr><td>MYSQL_BOTH</td><td>       Результат возвращается в массиве, содержащем как численные индексы, так
+       и индексы под именами колонок.
+      </td></tr><tr><td>MYSQL_NUM</td><td>       Результат возвращается в массиве, содержащем численные индексы. Индексы
+       стартуют с 0 (0 содержит первую колонку).
+      </td></tr></tbody></table></div> 
+ <p></p></div><div><h1 style="font-size:14px;color:blue"><a name="mysql.examples">Примеры</a></h1><p>     Этот пример показывает, как соединиться с базой данных, выполнить запрос,
+     распечатать результат и отсоединиться.
+     <table class="mtx4" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><a style="font-size:3px"><br></a><div class="mtx1"><a style="font-size:3px"></a><a name="AEN95297"></a><p><b>Пример 1. Пример работы с MySQL</b></p><table class="highlight" border="0" cellpadding="1"><tbody><tr><td><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Соединяемся,&nbsp;выбираем&nbsp;базу&nbsp;данных&nbsp;*/<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$link&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">mysql_connect</span><span style="color: #007700">(</span><span style="color: #DD0000">"mysql_host"</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">"mysql_user"</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">"mysql_password"</span><span style="color: #007700">)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or&nbsp;die(</span><span style="color: #DD0000">"Could&nbsp;not&nbsp;connect&nbsp;:&nbsp;"&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">mysql_error</span><span style="color: #007700">());<br>&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;</span><span style="color: #DD0000">"Connected&nbsp;successfully"</span><span style="color: #007700">;<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">mysql_select_db</span><span style="color: #007700">(</span><span style="color: #DD0000">"my_database"</span><span style="color: #007700">)&nbsp;or&nbsp;die(</span><span style="color: #DD0000">"Could&nbsp;not&nbsp;select&nbsp;database"</span><span style="color: #007700">);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Выполняем&nbsp;SQL-запрос&nbsp;*/<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$query&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">"SELECT&nbsp;*&nbsp;FROM&nbsp;my_table"</span><span style="color: #007700">;<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">$result&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">mysql_query</span><span style="color: #007700">(</span><span style="color: #0000BB">$query</span><span style="color: #007700">)&nbsp;or&nbsp;die(</span><span style="color: #DD0000">"Query&nbsp;failed&nbsp;:&nbsp;"&nbsp;</span><span style="color: #007700">.&nbsp;</span><span style="color: #0000BB">mysql_error</span><span style="color: #007700">());<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Выводим&nbsp;результаты&nbsp;в&nbsp;html&nbsp;*/<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">print&nbsp;</span><span style="color: #DD0000">"&lt;table&gt;\n"</span><span style="color: #007700">;<br>&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;(</span><span style="color: #0000BB">$line&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">mysql_fetch_array</span><span style="color: #007700">(</span><span style="color: #0000BB">$result</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">MYSQL_ASSOC</span><span style="color: #007700">))&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;</span><span style="color: #DD0000">"\t&lt;tr&gt;\n"</span><span style="color: #007700">;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;foreach&nbsp;(</span><span style="color: #0000BB">$line&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$col_value</span><span style="color: #007700">)&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;</span><span style="color: #DD0000">"\t\t&lt;td&gt;$col_value&lt;/td&gt;\n"</span><span style="color: #007700">;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;</span><span style="color: #DD0000">"\t&lt;/tr&gt;\n"</span><span style="color: #007700">;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;print&nbsp;</span><span style="color: #DD0000">"&lt;/table&gt;\n"</span><span style="color: #007700">;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Освобождаем&nbsp;память&nbsp;от&nbsp;результата&nbsp;*/<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">mysql_free_result</span><span style="color: #007700">(</span><span style="color: #0000BB">$result</span><span style="color: #007700">);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FF8000">/*&nbsp;Закрываем&nbsp;соединение&nbsp;*/<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #0000BB">mysql_close</span><span style="color: #007700">(</span><span style="color: #0000BB">$link</span><span style="color: #007700">);<br></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></td></tr></tbody></table></div></td></tr></tbody></table>
+    </p></div></div><div class="mtx4"><dl style="line-height:130%"><dt><h2 style="font-size:14px;color:red">Содержание</h2></dt><dt><a href="http://www.php.su/functions/?mysql-affected-rows">mysql_affected_rows</a>&nbsp;--&nbsp;Возвращает число затронутых прошлой операцией рядов.</dt><dt><a href="http://www.php.su/functions/?mysql-change-user">mysql_change_user</a>&nbsp;--&nbsp;
+     Изменяет пользователя для указанного соединения.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-client-encoding">mysql_client_encoding</a>&nbsp;--&nbsp;Возвращает кодировку соединения</dt><dt><a href="http://www.php.su/functions/?mysql-close">mysql_close</a>&nbsp;--&nbsp;Закрывает соединение с сервером MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-connect">mysql_connect</a>&nbsp;--&nbsp;Открывает соединение с сервером MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-create-db">mysql_create_db</a>&nbsp;--&nbsp;Создаёт базу данных MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-data-seek">mysql_data_seek</a>&nbsp;--&nbsp;Перемещает внутренний указатель в результате запроса</dt><dt><a href="http://www.php.su/functions/?mysql-db-name">mysql_db_name</a>&nbsp;--&nbsp;Возвращает название базы данных</dt><dt><a href="http://www.php.su/functions/?mysql-db-query">mysql_db_query</a>&nbsp;--&nbsp;Переключается к указанной базе данных и посылает запрос</dt><dt><a href="http://www.php.su/functions/?mysql-drop-db">mysql_drop_db</a>&nbsp;--&nbsp;Уничтожает базу данных MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-errno">mysql_errno</a>&nbsp;--&nbsp;
+     Возвращает численный код ошибки выполнения последней операции с MySQL
+    </dt><dt><a href="http://www.php.su/functions/?mysql-error">mysql_error</a>&nbsp;--&nbsp;
+     Возвращает строку ошибки последней операции с MySQL.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-escape-string">mysql_escape_string</a>&nbsp;--&nbsp;
+     Экранирует SQL спец-символы для mysql_query. 
+    </dt><dt><a href="http://www.php.su/functions/?mysql-fetch-array">mysql_fetch_array</a>&nbsp;--&nbsp;
+     Обрабатывает ряд результата запроса, возвращая ассоциативный массив,
+     численный массив или оба.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-fetch-assoc">mysql_fetch_assoc</a>&nbsp;--&nbsp;
+     Обрабатывает ряд результата запроса и возвращает ассоциативный массив.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-fetch-field">mysql_fetch_field</a>&nbsp;--&nbsp;
+     Возвращает информацию о колонке из результата запроса в виде объекта.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-fetch-lengths">mysql_fetch_lengths</a>&nbsp;--&nbsp;
+     Возвращает длину каждого поля в результате.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-fetch-object">mysql_fetch_object</a>&nbsp;--&nbsp;Обрабатывает ряд результата запроса и возвращает объект</dt><dt><a href="http://www.php.su/functions/?mysql-fetch-row">mysql_fetch_row</a>&nbsp;--&nbsp;Орабатывает ряд результата запроса и возвращает неассоциативный массив.</dt><dt><a href="http://www.php.su/functions/?mysql-field-flags">mysql_field_flags</a>&nbsp;--&nbsp;
+     Возвращает флаги указанного поля результата запроса.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-field-len">mysql_field_len</a>&nbsp;--&nbsp;
+     Возвращает длину указанного поля.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-field-name">mysql_field_name</a>&nbsp;--&nbsp;
+     Возвращает название указанной колонки результата запроса.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-field-seek">mysql_field_seek</a>&nbsp;--&nbsp;
+     Устанавливает внутренний указатель поля на переданное смещение.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-field-table">mysql_field_table</a>&nbsp;--&nbsp;
+     Возвращает название таблицы, которой принадлежит указанное поле.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-field-type">mysql_field_type</a>&nbsp;--&nbsp;
+     Возвращает тип указанного поля результата запроса.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-free-result">mysql_free_result</a>&nbsp;--&nbsp;Освобождает память от результата запроса</dt><dt><a href="http://www.php.su/functions/?mysql-get-client-info">mysql_get_client_info</a>&nbsp;--&nbsp;Возвращает данные о MySQL-клиенте</dt><dt><a href="http://www.php.su/functions/?mysql-get-host-info">mysql_get_host_info</a>&nbsp;--&nbsp;Возвращает информацию о соединении с MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-get-proto-info">mysql_get_proto_info</a>&nbsp;--&nbsp;Возвращает информацию о протоколе MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-get-server-info">mysql_get_server_info</a>&nbsp;--&nbsp;Возвращает информацию о сервере MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-info">mysql_info</a>&nbsp;--&nbsp;
+     Возвращает информацию о последнем запросе
+    </dt><dt><a href="http://www.php.su/functions/?mysql-insert-id">mysql_insert_id</a>&nbsp;--&nbsp;
+     Возвращает ID, сгенерированный при последнем INSERT-запросе.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-list-dbs">mysql_list_dbs</a>&nbsp;--&nbsp;
+     Возвращает список баз данных, доступных на сервере.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-list-fields">mysql_list_fields</a>&nbsp;--&nbsp;Возвращает список колонок таблицы</dt><dt><a href="http://www.php.su/functions/?mysql-list-processes">mysql_list_processes</a>&nbsp;--&nbsp;Возвращает список процессов MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-list-tables">mysql_list_tables</a>&nbsp;--&nbsp;Возвращает список таблиц базы данных MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-num-fields">mysql_num_fields</a>&nbsp;--&nbsp;Возвращает количество полей результата запроса</dt><dt><a href="http://www.php.su/functions/?mysql-num-rows">mysql_num_rows</a>&nbsp;--&nbsp;Возвращает количество рядов результата запроса</dt><dt><a href="http://www.php.su/functions/?mysql-pconnect">mysql_pconnect</a>&nbsp;--&nbsp;
+     Устанавливает постоянное соединение с сервером MySQL.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-ping">mysql_ping</a>&nbsp;--&nbsp;Проверяет соединение с сервером и пересоединяется при необходимости</dt><dt><a href="http://www.php.su/functions/?mysql-query">mysql_query</a>&nbsp;--&nbsp;Посылает запрос MySQL</dt><dt><a href="http://www.php.su/functions/?mysql-real-escape-string">mysql_real_escape_string</a>&nbsp;--&nbsp;
+     Экранирует специальные символы в строке, используемой в SQL-запросе, принмимая во внимание кодировку соединения.
+    </dt><dt><a href="http://www.php.su/functions/?mysql-result">mysql_result</a>&nbsp;--&nbsp;Возвращает данные результата запроса</dt>
+<dt><a href="http://www.php.su/functions/?mysql-select-db">mysql_select_db</a>&nbsp;--&nbsp;Выбирает базу данных MySQL</dt>
+<dt><a href="http://www.php.su/functions/?mysql-set-charset">mysql_set_charset</a>&nbsp;--&nbsp;Устанавливает кодировку MySQL по умолчанию</dt>
+<dt><a href="http://www.php.su/functions/?mysql-stat">mysql_stat</a>&nbsp;--&nbsp;Возвращает текущий статус сервера</dt><dt><a href="http://www.php.su/functions/?mysql-tablename">mysql_tablename</a>&nbsp;--&nbsp;Возвращает имя таблицы, содержащей указанное поле</dt><dt><a href="http://www.php.su/functions/?mysql-thread-id">mysql_thread_id</a>&nbsp;--&nbsp;Возвращает ID текущего потока</dt><dt><a href="http://www.php.su/functions/?mysql-unbuffered-query">mysql_unbuffered_query</a>&nbsp;--&nbsp;
+     Посылает MySQL SQL-запрос без авто-обработки результата и её
+     буфферизации.
+    </dt></dl></div></div></div><a style="font-size:4px">&nbsp;</a><br>
+
+</index>
+<a style="font-size:4px">&nbsp;</a><br>
+<table class="mtx1" align="center" bgcolor="#000066" border="0" cellpadding="3" cellspacing="1" width="470"><tbody><tr><td bgcolor="#CAEEFF"><center>&nbsp;<a href="http://www.php.su/functions/?page=abc"><strong>Функции по алфавиту</strong></a>&nbsp;</center></td><td bgcolor="#CAEEFF"><center>&nbsp;&nbsp;&nbsp;<a href="http://www.php.su/functions/"><strong>Содержание</strong></a>&nbsp;&nbsp;&nbsp;</center></td><td bgcolor="#CAEEFF"><center>&nbsp;<a href="http://www.php.su/functions/?page=cat"><strong>Функции по категориям</strong></a>&nbsp;</center></td></tr></tbody></table>
+<center>
+<table class="mtx1" align="center" bgcolor="#000066" border="0" cellpadding="3" cellspacing="1" width="470">
+  <tbody><tr>
+    <td bgcolor="#CAEEFF">
+      <center>
+        Есть еще вопросы или что-то непонятно - добро пожаловать на наш &nbsp;<a href="http://forum.php.su/" title="форум портала PHP.SU" target="_phpsuforum"><b>форум портала <span class="xq1">PHP</span><span class="xq2">.</span><span class="xq3">SU</span></b></a>&nbsp;
+      </center>
+    </td>
+  </tr>
+  <tr><td bgcolor="#F7F7F7">&nbsp;</td></tr>
+  <tr>
+    <td bgcolor="#CAEEFF">
+<table border="0" width="100%"><tbody><tr><td align="center" width="50%">
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="PHPmysql_files/xd_arbiter.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="PHPmysql_files/xd_arbiter.xhtml" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="PHPmysql_files/ping.xhtml" style="display: none;" allowtransparency="true" name="fbb8bfe17be6da" frameborder="0" scrolling="no"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=533670576683912";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div fb-xfbml-state="rendered" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="http://www.php.su" data-send="true" data-width="450" data-show-faces="false" data-action="recommend"><span style="height: 35px; width: 450px;"><iframe src="PHPmysql_files/like.html" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 35px; width: 450px;" name="f73217f2d93326" id="f2aeee899bf888" scrolling="no"></iframe></span></div>
+</td><td align="center" width="50%">
+    <div id="vk_like" style="clear: both; height: 22px; width: 180px; background: url(&quot;http://vk.com/images/upload.gif&quot;) no-repeat scroll center center transparent; position: relative;"><iframe style="overflow: hidden; height: 22px; width: 180px; z-index: 150;" id="vkwidget1" src="PHPmysql_files/widget_like.html" name="fXD13d88" frameborder="0" height="22" scrolling="no" width="100%"></iframe></div>
+    <script type="text/javascript">
+	VK.Widgets.Like("vk_like", {type: "button", pageUrl: "http://php.su/"});
+    </script>
+</td></tr></tbody></table>
+    </td>
+  </tr>
+
+</tbody></table>
+</center>
+
+
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#F7F7F7" valign="bottom">
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-6731571838950830";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+google_ad_channel ="8345202312";
+google_color_border = "F7F7F7";
+google_color_link = "0066CC";
+google_color_bg = "F7F7F7";
+google_color_text = "000000";
+google_color_url = "0066CC";
+//--></script>
+<script type="text/javascript" src="PHPmysql_files/show_ads.html">
+</script>
+</center>
+<br>
+<!--EOF_CONTENT_OF_PAGE-->
+</td>
+</tr>
+</tbody></table>
+<!--End of main Content-->
+</td>
+</tr></tbody></table>
+<!--End global table of content-->
+<a>&nbsp;</a>
+<!--Footer-->
+<table border="0" cellpadding="4" cellspacing="0" width="950"><tbody><tr><td class="footer" align="center" background="PHPmysql_files/ftrs.gif">
+&nbsp;&nbsp;<span class="footertext">© 2006 - 2013 &nbsp;<a href="http://www.php.su/" title="Портал PHP.SU"><span style="color:#003399"><b>PHP</b></span><span style="color:#009900"><b>.</b></span><span style="color:#FF0000"><b>SU</b></span></a> |
+<a href="http://www.php.su/project/?about" title="О проекте PHP.SU">О проекте</a> |
+<a href="http://www.php.su/gm/" target="_blank" title="Гостевая книга">Гостевая книга</a> |
+<a href="http://www.php.su/feedback/" target="_blank" title="Обратная связь с администрацией">Обратная связь</a> |
+<a href="#" onclick="window.external.AddFavorite(location.href, document.title);return false">Добавить в избранное</a> |
+<a href="http://www.php.su/project/?buttons" title="Кнопки портала">Наши кнопки</a> |
+<a href="http://www.php.su/project/?policy" title="Политика проекта">Политика проекта</a> |
+</span>
+</td>
+</tr></tbody></table>
+<!--End of Footer-->
+</div>
+<div align="center">
+<table border="0" cellpadding="4" cellspacing="0" width="950"><tbody><tr>
+<td class="footer" align="center" background="PHPmysql_files/ftrs.gif">
+&nbsp;<font size="1">Наши партнеры:</font> <span class="footertext">
+ Овальные <a href="http://www.u-stal.ru/catalogue/tubing/cold-deformed" target="_blank">трубы профильные</a> кварталы из металла. </span>
+</td>
+</tr></tbody></table>
+</div>
+
+<div align="center">
+<noindex>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write('<a href="http://www.liveinternet.ru/click" '+
+'target=_blank><img src="http://counter.yadro.ru/hit?t15.1;r'+
+escape(document.referrer)+((typeof(screen)=='undefined')?'':
+';s'+screen.width+'*'+screen.height+'*'+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+';u'+escape(document.URL)+
+";h"+escape(document.title.substring(0,80))+';'+Math.random()+
+'" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодн\я" '+
+'border=0 width=87 height=30><\/a>')//--></script><a href="http://www.liveinternet.ru/click" target="_blank"><img src="PHPmysql_files/hit.html" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня" border="0" height="30" width="87"></a><!--/LiveInternet-->
+&nbsp;
+<!--Rating@Mail.ru counter-->
+<script language="javascript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer);js=10;//--></script>
+<script language="javascript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled();js=11;//--></script>
+<script language="javascript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height;
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;//--></script>
+<script language="javascript1.3" type="text/javascript"><!--
+js=13;//--></script><script language="javascript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1079531" target="_blank">'+
+'<img src="http://d8.c7.b0.a1.top.mail.ru/counter?id=1079531;t=52;js='+js+
+a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" border="0" '+
+'height="30" width="87"><\/a>');if(11<js)d.write('<'+'!-- ');//--></script><a href="http://top.mail.ru/jump?from=1079531" target="_blank"><img src="PHPmysql_files/counter.html" alt="Рейтинг@Mail.ru" border="0" height="30" width="87"></a><!-- 
+<noscript><a target="_blank" href="http://top.mail.ru/jump?from=1079531">
+<img src="http://d8.c7.b0.a1.top.mail.ru/counter?js=na;id=1079531;t=52" 
+height="30" width="87" border="0" alt="Рейтинг@Mail.ru"></a></noscript>
+<script language="javascript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>');//-->
+<!--// Rating@Mail.ru counter-->
+</noindex>
+&nbsp;&nbsp;&nbsp;</div>
+</body></html>

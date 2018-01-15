@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML 5 теги &lt;svg> &lt;/svg> - створюють зображення</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script>
+function Open(ob){
+ var o = ob.previousSibling;
+ while(o.nodeType!=1) o=o.previousSibling;
+ var t=window.open('','New','height=250,width=250,location=no,menubar=no,scrollbars=no',false);
+ t.document.open();
+ t.document.write(o.innerHTML);
+ t.document.close();
+}
+</script>
+</head>
+<body>
+<h1>HTML 5 теги, які дозволять створити картинку всередині сторінки </h1>
+              
+              <p class="p2">Теги &lt;svg> &lt;/svg></p>
+  
+<p>Тег <kbd>&lt;svg> &lt;/svg></kbd>  (англ. svg — «Scalable Vector Graphics») —  призначений для створення векторного зображення за допомогою спеціальних тегів в форматі XML, які можна використовувати тільки всередині даного елементу.</p>
+<xmp>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title>Приклад використання</title>
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <circle cx="100" cy="50" r="40" stroke="black" stroke-width="2" fill="red"/>
+</svg>
+</body>
+</html> 
+</xmp>
+
+<h3 class="show" onclick="Open(this)">Результат</h3>
+</body>
+</html>

@@ -1,0 +1,21 @@
+H1 {margin-left:1em}
+H2 {margin-left:2em}
+H3 {margin-left:3em}
+H4 {margin-left:4em}
+H5 {margin-left:4.5em}
+@media screen{
+ H1:hover {color:red; cursor:pointer}
+ .noprint,.show {color:darkred;cursor:help}
+ XMP,DIV {display:none}
+ DIV XMP {display:block}
+ CODE,PRE,XMP {color:darkblue}
+ DIV .show {color:darkgreen}
+}
+@media print{
+ P {text-indent:2em;text-align:justify}
+ .noprint {display:none}
+ XMP,DIV,PRE {display:block}
+}
+@page:first {margin: 1cm;}
+@page:left {margin: 1cm 3cm 1cm 1.5cm;}
+@page:right {margin: 1cm 3cm 1cm 1.5cm;}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>HTML 5 теги &lt;canvas> &lt;/canvas> - створюють зображення</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script>
+function Open(ob){
+ var o = ob.previousSibling;
+ while(o.nodeType!=1) o=o.previousSibling;
+ var t=window.open('','New','height=250,width=250,location=no,menubar=no,scrollbars=no',false);
+ t.document.open();
+ t.document.write(o.innerHTML);
+ t.document.close();
+}
+</script>
+</head>
+<body>
+<h1>HTML 5 теги, які дозволять створити картинку всередині сторінки </h1>
+              
+              <p class="p2">Теги &lt;canvas> &lt;/canvas></p>
+  
+  <p>Тег <kbd>&lt;canvas> &lt;/canvas></kbd>  (англ. canvas — «холст») —  призначений для створення растрового зображення за допомогою JavaScript.
+  </p>
+<xmp>
+<html>
+  <head>
+    <title>Приклад використовування</title>
+  </head>
+  <body>
+    <canvas id='example'>
+      Цей текст відобразиться, якщо браузер не підтримує html5 елемент canvas.
+    </canvas>
+<script type="application/javascript">
+      var canvas = document.getElementById("example");
+      var context = canvas.getContext("2d");
+      function drawCircle(x, y, r) {
+        context.arc(x, y, r, 0, 2 * Math.PI, false);
+      }
+      context.beginPath();
+      drawCircle(150, 75, 50);
+      context.lineWidth = 15;
+      context.strokeStyle = "#0f0";
+      context.stroke();
+    </script>
+  </body>
+</html>
+</xmp>  
+
+<h3 class="show" onclick="Open(this)">Результат</h3>
+  
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Лабораторна робота № 3, Гулий Тарас, ПК-15-1</title>
+</head>
+<body>
+<h1 align=center>Лабораторна робота № 3</h1>
+<h2 align=center>Завдання</h2>
+<p align=justify>Написати скрипт, який використовує програму gtkdialog3/gtkdialog2. Вхідні параметри: група та ФІП студента. Необхідно перевірити, чи існує файл з іменем групи, якщо існує, тоді необхідно перевірити, чи студент з вказаним іменем навчається в цій групі. Видати відповідне повідомлення користувачу.</p>
+<h2 align=center>Текст розв'язку</h2>
+<xmp>
+!/bin/bash
+if [ -f "$1" ]; then
+if grep "$2" ./$1; then
+GTKDIALOG=gtkdialog 
+export MAIN_DIALOG=' 
+<window title="Лабороторна робота №3" icon-name="gtk-about" resizable="false" width-request="300" height-request="100">
+<vbox> 
+<hbox space-fill="true" space-expand="true">
+	<text>	 
+		<label>Студент найден в списке группы</label> 
+	</text> 
+</hbox>
+<hseparator width-request="240"></hseparator> 
+<hbox> 
+<button ok></button> 
+</hbox>  
+</vbox> 
+</window> 
+' 
+case $1 in 
+-d | --dump) echo "$MAIN_DIALOG" ;; 
+*) $GTKDIALOG --program=MAIN_DIALOG --center ;; 
+esac 
+------------
+else
+GTKDIALOG=gtkdialog 
+export MAIN_DIALOG=' 
+<window title="Лабороторна робота №3" icon-name="gtk-about" resizable="false" width-request="300" height-request="100">
+<vbox> 
+<hbox space-fill="true" space-expand="true">
+	<text>	 
+		<label>Студент не найден в списке группы</label>  
+	</text> 
+</hbox>
+<hseparator width-request="240"></hseparator> 
+<hbox> 
+	<button ok></button> 
+</hbox>  
+</vbox> 
+</window> 
+' 
+case $1 in
+-d | --dump) echo "$MAIN_DIALOG" ;; 
+*) $GTKDIALOG --program=MAIN_DIALOG --center ;; 
+esac 
+------------
+fi
+else 
+GTKDIALOG=gtkdialog 
+export MAIN_DIALOG=' 
+<window title="Лабороторна робота №3" icon-name="gtk-about" resizable="false" width-request="300" height-request="100"> 
+<vbox> 
+<hbox space-fill="true" space-expand="true"> 
+<text>	 
+	<label>Список группы не найден</label>  
+</text> 
+</hbox>
+	<hseparator width-request="240"></hseparator> 
+<hbox> 
+	<button ok></button> 
+</hbox>  
+</vbox> 
+</window> 
+' 
+case $1 in 
+-d | --dump) echo "$MAIN_DIALOG" ;; 
+*) $GTKDIALOG --program=MAIN_DIALOG --center ;; 
+esac 
+------------
+fi
+</xmp>
+<h2 align=center>Пояснення</h2>
+<p align=justify>Программа складаэться із трьох розгалуженнь, кожне з яких стоврує програмо задопомогою інструменту gtkdialog
+Спочатку робиться перевірка файла на корректність і виконується пошук у файлі за допомогою команди grep. Далі в залежності від результатів
+створюється діалог розмічений на дві частини відокремлені вертикальною лінією. У верхній частині знаходиться елементи типу label в якому сповіщається про результат пошуку
+у нижній частині встановлюється кнопка классу OK яка закриває діалог. Виконання скрипту доцільне з терміналу.</p>
+</body>
+</html>

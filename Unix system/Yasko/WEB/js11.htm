@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Обработка событий</title>
+<script src="Script.js"></script>
+<link rel="stylesheet" href="Style.css" type="text/css" />
+<style type="text/css">
+XMP {display:block}
+</style>
+</head>
+<body>
+
+<h2>Обработка событий</h2>
+<p>Событие - это какое-либо действие, осуществляемое пользователем либо браузером. Например, когда мы щелкаем (кликаем) на ссылке - осуществляется событие, его перехватывает специальный обработчик и перенаправляет нас на нужную страницу; при наведении курсора (указателя мыши) на ссылку в строке состояния (обычно находится в нижней части окна браузера) отображается адрес, так как обработчик "наведения курсора на объект (в данном случае на ссылку)" помещает туда этот адрес и так далее...
+
+<p>Следует различать события генерируемые, как пользователем (щелчок или движение мыши, изменение данных формы), так и браузером (окончание загрузки документа, закрытие страницы, ошибка и т. п.).
+
+<p>Каждое событие имеет свое имя, к примеру: щелчок - <code>click</code>, перемещение курсора за определенный объект - <code>mouseout</code>, получение фокуса (щелчок мыши на объекте, или переход к нему при помощи клавиши табуляции (Tab)) - <code>focus</code>, отправка формы - <code>submit</code>, сброс формы - <code>reset</code>, загрузка страницы - <code>load</code>, возникновение ошибки - <code>error</code> и т. д. Обработчик события имеет имя следующего образца: <code>on + имя_события</code>. Например: <code>onclick</code>, <code>onmouseout</code>, <code>onfocus</code>, <code>onsubmit</code>, <code>onreset</code>, <code>onload</code> ... 
+
+<p>На многие события можно реагировать с помощью JavaScript. Здесь мы разберем основные события и примеры их применения. 
+
+<p>Самый привычный способ передачи события элементу - это объявление названия функции в теге элемента. Заметим, что нам нужно записать не просто "myclickcode", а "myclickcode()" для соответствия синтаксической конструкции javascript. В html документе это будет выглядеть так: 
+<xmp>
+<h2 onclick="myclickcode()">
+Текст, реагирующий на событие <code>onclick</code>
+</h2>
+
+<script>
+function myclickcode() {
+alert('Ты щелкнул Текст!');
+}
+</script>
+</xmp>
+<h4 class="show" onclick="OpenPrev(this)">Выполнить</h4>
+
+<h3>Отмена действия события</h3>
+
+<p>Некоторые события, такие как <code>onsubmit</code>, позволяют управлять тем, как браузер поведет себя в ответ на них, возвращая контрольное значение. 
+Рассмотрим пример с формой, содержащей единственное текстовое поле email, и кнопку submit (Отправка):
+<xmp>
+<form id=myform onsubmit="return checkaddress()" action="#">
+<input type=text id=email>
+<input type=submit>
+</form>
+
+<script>
+function checkaddress() {
+  straddress = document.getElementById("email").value;
+  if (straddress.indexOf("@") != -1) return true; // содержит символ "@"
+  else{
+    alert('Проверьте правильность e-mail адреса!');
+    return false;
+  }
+}
+</script>
+</xmp>
+<h4 class="show" onclick="OpenPrev(this)">Выполнить</h4>
+
+<p>При обработке события <code>onkeydown</code>, последующие события <code>onkeypress</code>  и <code>onkeyup</code> могут быть отменены, что предотвратит ввод нежелательных символов.
+Например, следующий пример показывает, что в текстовое поле можна ввести только 4 цифры.
+
+<xmp>
+Введите год рождения: <input type="text" id="Birth" onkeydown="return Check(this,event)">
+<script>
+function Check(obj,ev) {
+ if(ev.keyCode<47 || ev.keyCode>57 || obj.value.length>3) return false;
+}
+</script>
+</xmp>
+<h4 class="show" onclick="OpenPrev(this)">Выполнить</h4>
+
+<p>Полный перечень событий можно посмотреть в <a href="HTML5/events.html">справочнике событий</a>.
+
+<hr width="40%" align="center">
+</body>
+</html>

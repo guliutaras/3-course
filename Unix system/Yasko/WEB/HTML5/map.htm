@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>HTML 5 теги &lt;map> &lt;/map> -  навігаційна карта </title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<h1>HTML 5 теги, що визначають навігаційну карту</h1><p class="p2">Теги &lt;map> &lt;/map></p>
+  
+  <p>Теги <kbd>&lt;map> &lt;/map></kbd>   визначають навігаційну карту:
+  </p>
+  <table class="jsexam"><tr><td class="white"><code> 
+ &lt;html><br />
+ &lt;body><br />
+  
+  &lt;img src="../images/casino.jpg" width="300" height="200" usemap="#fishki" border="0" hspace="27" /&gt;<br />
+ &lt;map  name="fishki"&gt;<br />
+&lt;area shape="rect" coords="192,90,230,140" alt="Червоні фішки" href="#" /&gt;<br />
+&lt;area shape="circle" coords="275,147,18" alt="Зелена фішка"  href="#" /&gt;<br />
+&lt;/map&gt;<br />
+ 
+  
+
+  
+ &lt;/body><br />
+ &lt;/html>
+ </code></td></tr></table>
+  <p>На нижньому малюнку червоні фішки и одинична зелена є гіперпосиланнями:</p>
+<img src="../images/casino.jpg" width="300" height="200"  border="0" hspace="27" alt="Навігаційна карта" title="Навігаційна карта" usemap="#fishki" />
+ <map id="fishki" name="fishki">
+<area href="#" shape="rect" coords="192,90,230,140" alt="Червоні фішки" title="Червоні фішки" />
+<area  href="#"  shape="circle" coords="275,147,18" alt="Зелена фішка" title="Зелена фішка" />
+</map>
+ <p>Атрибут <kbd>name=""</kbd> &ndash; обов'язковий. Його значення  використовується атрибутом <kbd>usemap=""</kbd>, що знаходиться всередині тегу <kbd>&lt;img /></kbd>.</p>
+ 
+  
+</body>
+</html>

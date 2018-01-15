@@ -1,0 +1,432 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>HTML події</th> </title>
+<meta http-equiv="Content-Language" content="ua">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<h2>HTML події</h2>
+
+<table border="1">
+
+<thead>
+<tr><th class="first">Подія</th><th class="second">Пояснення</th><th>До яких елементів</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>onabort</td>
+<td>Подія, коли користувач перериває завантаження зображення.</td>
+<td>IMG</td>
+</tr>
+<tr>
+<td>onactivate</td>
+<td>Подія, коли об'єкт обраний в якості активного елементу.</td>
+
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+<td>onafterprint</td>
+<td>Подія на об'єкт відразу після його пов'язаний документ друку або попереднього перегляду для друку.</td>
+<td>window, BODY, FRAMESET</td>
+</tr>
+<tr>
+<td>onafterupdate</td>
+<td>Подія на DataBound об'єкта після успішного оновлення відповідних даних в об'єкт джерела даних.</td>
+<td>A, BUTTON, DIV, FRAME, IFRAME, IMG, INPUT type=checkbox, INPUT type=hidden, INPUT type=password, INPUT type=radio, INPUT type=text, TEXTAREA, LABEL, LEGEND, MARQUEE, SELECT, SPAN, BDO, CUSTOM, RT, RUBY</td>
+
+</tr>
+<tr>
+<td>onbeforeactivate</td>
+<td>Подія безпосередньо перед об'єкта встановлюється в якості активного елементу.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=reset, INPUT type=password, INPUT type=radio, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onbeforecopy</td>
+<td>Подія на вихідний об'єкт перед вибором копіюється в буфер обміну.</td>
+<td>A, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, DT, EM, FIELDSET, FORM, Hn, I, IMG, LABEL, LEGEND, LI, LISTING, MENU, NOBR, OL, P, PLAINTEXT, PRE, S, SAMP, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TD, TEXTAREA, TH, TR, TT, U, UL</td>
+</tr>
+
+<tr>
+<td>onbeforecut</td>
+<td>Подія на вихідний об'єкт перед вибором буде вилучений з документа.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onbeforedeactivate</td>
+<td>Подія безпосередньо перед activeElement змінюється від поточного об'єкта на інший об'єкт в основному документі.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+
+<td>onbeforeeditfocus</td>
+<td>Подія, перш ніж управління входить інтерфейс активованому стані.</td>
+<td>A, APPLET, AREA, BUTTON, CUSTOM, DIV, document, FIELDSET, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, MARQUEE, OBJECT, SELECT, SPAN, TABLE, TD, TEXTAREA, TR</td>
+</tr>
+<tr>
+<td>onbeforepaste</td>
+<td>Подія на цільовий об'єкт, перш ніж вибір вставлений з буфера обміну в документ.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onbeforeprint</td>
+
+<td>Подія на об'єкт до його пов'язаний документ друку або попереднього перегляду для друку.</td>
+<td>window, BODY, FRAMESET</td>
+</tr>
+<tr>
+<td>onbeforeunload</td>
+<td>Подія до сторінки вивантаженні.</td>
+<td>BODY, FRAMESET, window</td>
+</tr>
+<tr>
+<td>onbeforeupdate</td>
+<td>Подія на DataBound об'єкта перед оновленням відповідних даних в об'єкт джерела даних.</td>
+
+<td>A, BUTTON, DIV, FRAME, IFRAME, IMG, INPUT type=checkbox, INPUT type=hidden, INPUT type=password, INPUT type=radio, INPUT type=text, TEXTAREA, LABEL, LEGEND, MARQUEE, SELECT, SPAN, BDO, CUSTOM, RT, RUBY</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>Подія, коли об'єкт втрачає фокус вводу.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+<td>oncellchange</td>
+<td>Подія при зміні даних у постачальника даних.</td>
+<td>APPLET, BDO, OBJECT</td>
+
+</tr>
+<tr>
+<td>onchange</td>
+<td>Подія, коли утримання об'єктів або виділення змінилися.</td>
+<td>INPUT type=text, SELECT, TEXTAREA</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>Подія, коли користувач натискає ліву кнопку миші на об'єкті.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+
+<tr>
+<td>oncontextmenu</td>
+<td>Подія, коли користувач клацає правою кнопкою миші в клієнтській області, відкриття контекстного меню.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>oncontrolselect</td>
+<td>Подія, коли користувач збирається зробити контроль вибір об'єкта.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+
+<td>oncopy</td>
+<td>Подія на вихідний елемент, коли користувач копіює об'єкт або виділення, додавши його в буфер обміну.</td>
+<td>A, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, DT, EM, FIELDSET, FORM, Hn, HR, I, IMG, LEGEND, LI, LISTING, MENU, NOBR, OL, P, PLAINTEXT, PRE, S, SAMP, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TD, TH, TR, TT, U, UL</td>
+</tr>
+<tr>
+<td>oncut</td>
+<td>Подія на вихідний елемент, коли об'єкт або вибір буде вилучений з документа і додаються в системний буфер.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>ondataavailable</td>
+
+<td>Подія періодично, як дані надходять з джерела даних об'єктів, які асинхронно передавати свої дані.</td>
+<td>APPLET, OBJECT, XML</td>
+</tr>
+<tr>
+<td>ondatasetchanged</td>
+<td>Подія, коли дані, що надаються дані зміни вихідного об'єкта.</td>
+<td>APPLET, OBJECT, XML</td>
+</tr>
+<tr>
+<td>ondatasetcomplete</td>
+<td>Подія, щоб вказати, що всі дані доступні з об'єкта джерела даних.</td>
+
+<td>APPLET, OBJECT, XML</td>
+</tr>
+<tr>
+<td>ondblclick</td>
+<td>Подія, коли користувач двічі клацає об'єкт.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>ondeactivate</td>
+<td>Подія, коли activeElement змінюється від поточного об'єкта на інший об'єкт в основному документі.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+
+</tr>
+<tr>
+<td>ondrag</td>
+<td>Подія яка відбувається періодично під час операції перетягування.</td>
+<td>A, ACRONYM, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LI, LISTING, MAP, MARQUEE, MENU, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, S, SAMP, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>ondragend</td>
+<td>Подія на вихідний об'єкт, коли користувач відпускає кнопку миші в кінці операції перетягування.</td>
+<td>A, ACRONYM, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LI, LISTING, MAP, MARQUEE, MENU, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, S, SAMP, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TR, TT, U, UL, VAR, XMP </td>
+</tr>
+
+<tr>
+<td>ondragenter</td>
+<td>Подія на цільовий елемент, коли користувач починає перетягувати об'єкт.</td>
+<td>A, ACRONYM, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LI, LISTING, MAP, MARQUEE, MENU, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>ondragleave</td>
+<td>Подія на цільовий об'єкт, коли користувач переміщує миша з допустима мета падіння під час операції перетягування.</td>
+<td>A, ACRONYM, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LI, LISTING, MAP, MARQUEE, MENU, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+
+<td>ondragover</td>
+<td>Подія на цільовий елемент безперервно, поки користувач перетягує об'єкт, над допустима мета падіння.</td>
+<td>A, ACRONYM, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LI, LISTING, MAP, MARQUEE, MENU, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>ondragstart</td>
+<td>Подія на вихідний об'єкт, коли користувач починає перетягнути виділений текст або вибраного об'єкту.</td>
+<td>A, ACRONYM, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>ondrop</td>
+
+<td>Подія на цільовий об'єкт при відпуску кнопки миші під час операції перетягування і падіння.</td>
+<td>A, ACRONYM, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LI, LISTING, MAP, MARQUEE, MENU, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onerror</td>
+<td>Подія при виникненні помилки під час завантаження об'єкта.</td>
+<td>IMG, OBJECT, STYLE, window</td>
+</tr>
+<tr>
+<td>onerrorupdate</td>
+<td>Подія на DataBound об'єкта при виникненні помилки під час оновлення відповідних даних в об'єкт джерела даних.</td>
+
+<td>A, BUTTON, DIV, FRAME, IFRAME, IMG, INPUT type=checkbox, INPUT type=hidden, INPUT type=password, INPUT type=radio, INPUT type=text, TEXTAREA, LABEL, LEGEND, MARQUEE, SELECT, SPAN, BDO, CUSTOM, RT, RUBY</td>
+</tr>
+<tr>
+<td>onfilterchange</td>
+<td>Подія, коли візуальний фільтр зміни стану або завершує перехід.</td>
+<td>BDO, BODY, BUTTON, CUSTOM, DIV, FIELDSET, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, MARQUEE, nextID, RT, RUBY, SPAN, TABLE, TD, TEXTAREA, TH, TR</td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>Подія, коли людина отримує фокус.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+
+</tr>
+<tr>
+<td>onfocusin</td>
+<td>Подія для елементів тільки до установки фокусу на цей елемент.</td>
+<td> A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=reset, INPUT type=password, INPUT type=radio, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP </td>
+</tr>
+<tr>
+<td>onfocusout</td>
+<td>Подія на поточний елемент з фокусом, відразу після переміщення фокусу на інший елемент.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=reset, INPUT type=password, INPUT type=radio, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+
+</tr>
+<tr>
+<td>onhelp</td>
+<td>Подія, коли користувач натискає клавішу F1, коли браузер активного вікна.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>Подія, коли користувач натискає клавішу.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+
+<tr>
+<td>onkeypress</td>
+<td>Подія, коли користувач натискає буквено-цифрові клавіші.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onkeyup</td>
+<td>Подія, коли користувач натискає клавішу.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, document, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+
+<td>onlayoutcomplete</td>
+<td>Подія, коли макет друку або попереднього перегляду завершення процесу заповнення поточного об'єкта LayoutRect із вмістом з вихідного документа.</td>
+<td>BASE, BASEFONT, BGSOUND, BR, COL, DD, DIV, DL, DT, FONT, HEAD, HR, HTML, HTML Comment, LAYOUTRECT, LI, META, OL, OPTION, P, TITLE, UL</td>
+</tr>
+<tr>
+<td>onload</td>
+<td>Подія відразу після браузер завантажує об'єкт.</td>
+<td>APPLET, BODY, EMBED, FRAME, FRAMESET, IFRAME, IMG, LINK, SCRIPT, window</td>
+</tr>
+<tr>
+<td>onlosecapture</td>
+
+<td>Подія, коли об'єкт втрачає захоплення миші.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BR, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, NOBR, OBJECT, OL, OPTION, P, PLAINTEXT, PRE, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onmousedown</td>
+<td>Подія, коли користувач натискає на об'єкт з будь-якої кнопки миші.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onmouseenter</td>
+<td>Подія, коли користувач переміщує курсор миші на об'єкт.</td>
+
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BASE, BASEFONT, BDO, BGSOUND, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, HTML, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onmouseleave</td>
+<td>Подія, коли користувач переміщує курсор миші за межами об'єкта.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BASE, BASEFONT, BDO, BGSOUND, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, HTML, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onmousemove</td>
+<td>Подія, коли користувач переміщує курсор миші на об'єкт.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=reset, INPUT type=password, INPUT type=radio, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>Подія, коли користувач переміщує курсор миші за межами об'єкта.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>Подія, коли користувач переміщує курсор миші на об'єкт.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+
+<tr>
+<td>onmouseup</td>
+<td>Подія, коли користувач відпускає кнопку миші, коли миша перебуває над об'єктом.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onmousewheel</td>
+<td>Подія, коли коліщатко обертається.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=reset, INPUT type=password, INPUT type=radio, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+
+<td>onmove</td>
+<td>Подія при переміщенні об'єкта.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+<td>onmoveend</td>
+<td>Подія, коли об'єкт перестає рухатися.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+<td>onmovestart</td>
+
+<td>Подія, коли об'єкт починає рухатися.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+<td>onpaste</td>
+<td>Подія на цільовий об'єкт, коли користувач пасти даних, передачі даних з буфера обміну в документ.</td>
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OL, P, PLAINTEXT, PRE, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onpropertychange</td>
+<td>Подія при зміні властивостей об'єкта.</td>
+
+<td>A, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, COMMENT, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LEGEND, LI, LISTING, MAP, MARQUEE, MENU, NOBR, OBJECT, OL, OPTION, P, PLAINTEXT, PRE, S, SAMP, SCRIPT, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+</tr>
+<tr>
+<td>onreadystatechange</td>
+<td>Подія, коли стан об'єкта не змінилося.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BASE, BASEFONT, BDO, BGSOUND, BIG, BLOCKQUOTE, BODY, BR, BUTTON, CAPTION, CENTER, CITE, CODE, COL, COLGROUP, COMMENT, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, HEAD, Hn, HR, HTML, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LINK, LISTING, MAP, MARQUEE, MENU, namespace, nextID, NOBR, NOFRAMES, NOSCRIPT, OBJECT, OL, OPTION, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SCRIPT, SELECT, SMALL, SPAN, STRIKE, STRONG, STYLE, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TITLE, TR, TT, U, UL, VAR, XML, XMP</td>
+</tr>
+<tr>
+<td>onreset</td>
+<td>Подія, коли користувач скидає форму.</td>
+<td>FORM</td>
+
+</tr>
+<tr>
+<td>onresize</td>
+<td>Подія, коли розмір об'єкта може змінитися.</td>
+<td>A, ADDRESS, APPLET, B, BIG, BLOCKQUOTE, BUTTON, CENTER, CITE, CODE, CUSTOM, DD, DFN, DIR, DIV, DL, DT, EM, EMBED, FIELDSET, FORM, FRAME, Hn, HR, I, IMG, INPUT type=button, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=reset, INPUT type=submit, INPUT type=text, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PRE, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TEXTAREA, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+<td>onresizeend</td>
+<td>Подія, коли користувач закінчує зміни розмірів об'єкта контролю вибору.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+
+<tr>
+<td>onresizestart</td>
+<td>Подія, коли користувач починає змінювати розміри об'єкта в управління вибору.</td>
+<td>A, ACRONYM, ADDRESS, APPLET, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CUSTOM, DD, DFN, DIR, DIV, DL, document, DT, EM, EMBED, FIELDSET, FONT, FORM, FRAME, FRAMESET, Hn, HR, I, IFRAME, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=hidden, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, INS, ISINDEX, KBD, LABEL, LEGEND, LI, LISTING, MARQUEE, MENU, OBJECT, OL, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, window, XMP</td>
+</tr>
+<tr>
+<td>onrowenter</td>
+<td>Подія, щоб вказати, що поточний рядок змінилася у джерелі даних і нових значень дані по об'єкту.</td>
+<td>APPLET, OBJECT, XML</td>
+</tr>
+<tr>
+
+<td>onrowexit</td>
+<td>Подія перед управління джерелом даних зміни поточного рядка в об'єкті.</td>
+<td>APPLET, OBJECT, XML</td>
+</tr>
+<tr>
+<td>onrowsdelete</td>
+<td>Подія, коли рядків ось-ось будуть видалені з записів.</td>
+<td>APPLET, OBJECT, XML</td>
+</tr>
+<tr>
+<td>onrowsinserted</td>
+
+<td>Подія тільки після нових рядків вставляються в поточне записів.</td>
+<td>APPLET, OBJECT, XML</td>
+</tr>
+<tr>
+<td>onscroll</td>
+<td>Подія, коли користувач переміщає повзунка в смузі прокрутки на об'єкт.</td>
+<td>APPLET, BDO, BODY, CUSTOM, DIV, EMBED, MAP, MARQUEE, OBJECT, TABLE, TEXTAREA, window</td>
+</tr>
+<tr>
+<td>onselect</td>
+<td>Подія при зміні поточного вибору.</td>
+
+<td>BODY, INPUT type=text, TEXTAREA</td>
+</tr>
+<tr>
+<td>onselectionchange</td>
+<td>Подія, коли вибір стану документ зміни.</td>
+<td>document</td>
+</tr>
+<tr>
+<td>onselectstart</td>
+<td>Подія, коли об'єкт вибирається.</td>
+<td>A, ACRONYM, ADDRESS, AREA, B, BDO, BIG, BLOCKQUOTE, BODY, BUTTON, CAPTION, CENTER, CITE, CODE, CUSTOM, DD, DEL, DFN, DIR, DIV, DL, DT, EM, FIELDSET, FONT, FORM, Hn, HR, I, IMG, INPUT type=button, INPUT type=checkbox, INPUT type=file, INPUT type=image, INPUT type=password, INPUT type=radio, INPUT type=reset, INPUT type=submit, INPUT type=text, KBD, LABEL, LI, LISTING, MAP, MARQUEE, MENU, nextID, NOBR, OBJECT, OL, OPTION, P, PLAINTEXT, PRE, Q, RT, RUBY, S, SAMP, SELECT, SMALL, SPAN, STRIKE, STRONG, SUB, SUP, TABLE, TBODY, TD, TEXTAREA, TFOOT, TH, THEAD, TR, TT, U, UL, VAR, XMP</td>
+
+</tr>
+<tr>
+<td>onstop</td>
+<td>Подія, коли користувач натискає кнопку Стоп або залишає веб-сторінку.</td>
+<td>document</td>
+</tr>
+<tr>
+<td>onsubmit</td>
+<td>Подія перед відправкою даних  з форми.</td>
+<td>FORM</td>
+</tr>
+
+<tr>
+<td>onunload</td>
+<td>Подія безпосередньо перед об'єкт вивантажується.</td>
+<td>BODY, FRAMESET, window</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+

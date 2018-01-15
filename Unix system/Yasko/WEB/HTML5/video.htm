@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>HTML 5 теги &lt;video> &lt;/video> - відео на сайті</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<h1>HTML 5 теги, що впроваджують відео на сторінки сайту</h1>
+              
+              <p class="p2">Теги &lt;video> &lt;/video></p>
+  
+  <p>Теги <kbd>&lt;video> &lt;/video></kbd>  визначають відео на сайті:
+  </p>
+    <table class="jsexam"><tr><td>
+                 <code><span class="white">
+ &lt;!DOCTYPE HTML><br />
+&lt;html><br />
+&lt;head><br />
+&lt;meta http-equiv="Content-Type" content="text/html; charset=windows-1251" /><br />
+&lt;/head><br />
+&lt;body><br />
+
+&lt;video src="video.mp4" controls="controls"><br />
+Ваш браузер не підтримує теги&lt;video> &lt;/video>! Оновіть версію браузера!<br />
+&lt;/video><br />
+
+&lt;/body><br />
+&lt;/html>
+</span></code></td></tr></table>
+  
+ 
+
+ 
+  <p>Тег <kbd>&lt;source /></kbd> визначає джерело відео:</p>
+ <table class="jsexam"><tr><td>
+                 <code><span class="white">
+  &lt;video controls="controls"><br />
+ &lt;source src="video.m4v" type="video/mp4" /> <span class="coments">&lt;!-- MPEG4 для браузерів Safari --></span>         <br />
+ &lt;source src="video.ogg" type="video/ogg" /> <span class="coments">&lt;!-- Ogg Theora для  Firefox --></span>          <br />
+&lt;/video><br />
+
+</span></code></td></tr></table>
+  <p class="p3">Атрибути і значення</p>
+ <ul>
+ 
+
+
+ <li><kbd>autoplay="autoplay"</kbd> &ndash;  <em>відео</em>   відтворюється відразу після завантаження сторінки.</li>
+  <li><kbd>autobuffer="autobuffer"</kbd> &ndash;    <em>відео</em>відтворюється вже в момент завантаження сторінки.</li>
+  <li><kbd>controls="controls"</kbd> &ndash; панель управління відеоплеєром.</li>
+  <li><kbd>loop="loop"</kbd> &ndash; по закінченню, <em>відео</em> програється знову.</li>
+ 
+  <li><kbd>src="url"</kbd> &ndash; джерело<em>відео</em>.</li>
+  <li><kbd>type="video/ogg"</kbd> &ndash;визначає формат<em>відео</em>.</li>
+  <li><kbd>height=""</kbd> &ndash;висота відеоплеєра.</li>
+   <li><kbd>width=""</kbd> &ndash; ширина  відеоплеєра.</li>
+ 
+ 
+ </ul>
+  
+ <p>У прикладах видно, файли яких форматів були використані. Будемо сподіватися, що розробники web-браузерів з часом зійдуться в думках і виберуть якийсь один<em>відео</em>формат, який отримає кросбраузерність підтримку. Але це в майбутньому, а поки задовольняємося тим, що є.</p>
+ 
+ 
+ 
+   <p>Теги <kbd>&lt;video> &lt;/video>, &lt;source  /></kbd> вперше представлені в специфікації<b>HTML 5</b>.  
+  </p>
+</body>
+</html>

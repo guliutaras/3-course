@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Обработка ошибок</title>
+<script src="Script.js"></script>
+<link rel="stylesheet" href="Style.css" type="text/css"/>
+</head>
+<body>
+
+<h2>Обработка ошибок</h2>
+
+Исключения: throw/catch/finally
+
+Работа с исключениями в javascript организована в типичном для языка стиле вседозволенности.
+
+Абсолютно любой объект можно бросить в виде исключения:
+1	try {
+2	  ...
+3	  throw {message: "Ого!"}
+4	  ..
+5	} catch (e) {
+6	  alert("Ага, попался!")
+7	}
+
+Обычно бросают, все же, не простые объекты, а потомки встроенного класса Error:
+throw new Error("connection down, server timeout")
+// или сделать наследника Error:
+throw new ConnectionError("server timeout")
+Встроенный класс Error
+
+Встроенный класс Error удобен для унификации проверки "a instanceof Error" и интероперабельности с другими библиотеками, так как ничего полезного в нем часто нет.
+
+В Firefox у объекта Error есть полный бэктрейс в свойстве stack и еще масса полезных свойств:
+// так можно быстро узнать стек без отладчика
+alert( (new Error()).stack )
+
+В IE тоже есть некоторые полезные свойства, а в Opera/Safari - на момент написания только message:
+var e = new Error("hi")
+alert(e.message)  // => "hi"
+
+Поэтому, например, у меня созданы потомки (синтаксис фреймворка dojo):
+01	// базовый класс для ошибок, со стеком (Firefox)
+02	// сообщением message и дополнительной информацией extra
+03	dojo.declare(
+04	    "dojo.Error",
+05	    Error,
+06	    function(message, extra) {
+07	        this.message = message;
+08	        this.extra = extra;
+09	        this.stack = (new Error()).stack;  
+10	    }
+11	)
+12	// Потомок, имя ошибки хранится в name
+13	// формат: dojo.declare(Имя, Родитель, Конструктор)
+14	dojo.declare(
+15	    "dojo.CommunicationError",
+16	    dojo.Error,
+17	    function() {
+18	        this.name="CommunicationError";
+19	    }
+20	)
+21	 
+22	// еще потомок для примера
+23	dojo.declare(
+24	    "dojo.LockedError",
+25	    dojo.Error,
+26	    function() {
+27	        this.name="LockedError";
+28	    }
+29	)
+30	...
+Ловля конкретного исключения
+
+При перехвате исключений редко нужно перехватывать все подряд. Обычно - надо перехватить определенный класс исключений. Стандартный оператор catch такого не умеет, поэтому полный код обработки будет выглядить так:
+01	try {
+02	    … код ...
+03	} catch(e) {
+04	    // ловим нужное исключение
+05	    if (e instanceof ConnectionError) {
+06	        // обрабатываем его
+07	        … reconnect …
+08	    } else {
+09	        // пробрасываем незнакомое исключение дальше
+10	        throw e
+11	    }
+12	         
+13	} finally {
+14	    // блок finally выполняется всегда,
+15	    // вне зависимости - было исключение или нет
+16	    … notifyUser() ..
+17	}
+
+В этом примере также присутствует блок finally, взятый в javascript из java. В стандартной схеме try..catch..finally, код из блока finally выполняется либо после try, если эксепшна нет, либо после catch, даже если эксепшн выпал наружу.
+
+Короче говоря, код в finally выполнится при любом результате работы try/catch, и туда удобно ставить всякие очистки, уведомления о конце процесса и т.п.
+
+<hr width="40%" align="center">
+</body>
+</html>

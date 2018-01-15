@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>HTML 5 тег &lt;area /> - активна область всередині зображення-карти</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<h1>HTML 5 теги, що визначають область зображення-карти</h1>
+              
+              <p class="p2">Тег &lt;area /></p>
+  
+  <p>Тег <kbd>&lt;area /></kbd>  визначає активну область всередині навігаційної карти:  
+  </p>
+    <table class="jsexam"><tr><td class="white">
+                 <code>
+                 
+&lt;img src="../images/casino.jpg" width="300" height="200" usemap="#fishki" border="0" hspace="27" /&gt;<br />
+ &lt;map  name="fishki"&gt;<br />
+&lt;area shape="rect" coords="192,90,230,140" alt="Червоні фішки" href="#" /&gt;<br />
+&lt;area shape="circle" coords="275,147,18" alt="Зелена фішка"  href="#" /&gt;<br />
+&lt;/map&gt;
+</code></td></tr></table>
+  
+<p>На нижньому малюнку червоні фішки и одинична зелена являються гіперпосиланнями:</p>
+<img src="../images/casino.jpg" width="300" height="200"  border="0" hspace="27" alt="Навігаційна карта" title="Навігаційна карта" usemap="#fishki" />
+ <map id="fishki" name="fishki">
+<area href="#" shape="rect" coords="192,90,230,140" alt="Червоні фішки " title="Червоні фішки"  />
+  <area  href="#"  shape="circle" coords="275,147,18" alt="Зелена фішка" title="Зелена фішка" />
+</map>
+<p class="p3">Атрибути и значення</p>
+<ul>
+<li>Атрибут <kbd>href=""</kbd> &ndash; вказує цільовий url.</li>
+<li>Атрибут <kbd>alt=""</kbd> &ndash; спливаюча підказка. </li>
+<li>Атрибут <kbd>coords=""</kbd> &ndash;  визначає координати активної області. </li>
+<li>Атрибут <kbd>shape=""</kbd> &ndash;  визначає форму  активної області. </li>
+</ul>
+
+<p>Докладніше про це в уроці <a href="../HTML/html_map.php" class="ssilka4">Навігаційна карта</a>.</p>
+</body>
+</html>

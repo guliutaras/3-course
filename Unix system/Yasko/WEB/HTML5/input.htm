@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>HTML 5 тег &lt;input /> - поле для вводу даних чи кнопка (залежить від атрибутів)</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<h1>HTML 5 тег, що визначає поле вводу чи кнопку </h1>
+              
+              <p class="p2"> Тег &lt;input /></p>
+  
+  <p>Тег <kbd>&lt;input /></kbd>  створює поле  для вводу даних чи кнопку:  
+  </p>
+    <table class="jsexam"><tr><td>
+                 <code><span class="white">
+ 
+&lt;html><br />  
+&lt;body><br />
+ 
+  &lt;form action=""><br />
+  
+ 
+&lt;input type="radio" name="Sex" value="Чоловіча" checked="checked" /> Чоловік&lt;br /><br />
+&lt;input type="radio" name="Sex" value="Жіноча" /> Жінка&lt;br /><br />
+&lt;input type="text" size="20" value="Росія"  /> Країна&lt;br /><br />
+&lt;input type="text" size="20" /> Місто&lt;br />&lt;br /><br />
+ 
+&lt;input type="image" src="../images/input_img.png" />&lt;br /><br />
+ 
+&lt;/form>  <br />         
+&lt;/body><br />
+ &lt;/html><br />
+</span></code></td></tr></table>
+  
+ <p>Результат:</p>
+ <div style="margin-left:25px">
+  <form action="">
+<input type="radio" name="Sex" value="Чоловіча" checked="checked" /> Чоловік<br />
+<input type="radio" name="Sex" value="Жіноча" /> Жінка<br />
+<input type="text" size="20" value="Росія" /> Країна<br />
+<input type="text" size="20" /> Місто<br /><br />
+<input type="image" src="../images/input_img.png" /><br />
+</form> 
+</div>
+ <p class="p3">Атрибути і значення</p>
+<ul>
+<li>Атрибут <kbd>type=""</kbd> зі значеннями: <kbd>button,
+checkbox,
+color,
+date,
+datetime,
+datetime-local,
+email,
+file,
+hidden,
+image,
+month,
+number,
+password,
+radio,
+range,
+reset,
+search,
+submit,
+tel,
+text,
+time,
+url,
+week </kbd> &ndash; вказує тип тегу <kbd>&lt;input /></kbd> (<kbd>text</kbd> &ndash;  за замовчанням).</li>
+
+
+<li>Атрибут <kbd>src=""</kbd> &ndash;  вказує url зображення-кнопки, затосовується разом з <kbd>type="image"</kbd>.</li>
+<li>Прапорець <kbd>checked="checked"</kbd> &ndash; встановлює для прикладу одне з запропонованих значень, застосовується разом з <kbd>type="checkbox"</kbd> или <kbd>type="radio"</kbd>.</li>
+<li>Атрибут <kbd>name=""</kbd> &ndash;  присвоює ім'я елементу. Застосовується для ідентифікації отриманої інформації при обробці даних.</li>
+<li>Атрибут <kbd>value=""</kbd> використовується для різноманітних цілей: надписує кнопки 
+(якщо застосовується разом з <kbd>type="submit"</kbd> або з <kbd>type="reset"</kbd>), зберігає деякі значення, що відсилаються на обробку 
+(якщо застосовується разом з <kbd>type="checkbox"</kbd> або з <kbd>type="radio"</kbd>), встановлює значення по замовчуванню для текстових полів вводу даних
+(якщо застосовується разом з <kbd>type="text"</kbd> або з <kbd>type="password"</kbd>).</li>
+<li>Атрибут <kbd>size="20"</kbd> &ndash;  встановлює довжину текстового поля в символах.</li>
+<li>Прапорець <kbd>required="required"</kbd> &ndash;  визначає обов'язкове для заповнення поле.</li>
+<li>Атрибут <kbd>autocomplete=""</kbd> зі значеннями <kbd>on, off</kbd> &ndash;  каже браузеру зберігати чи не зберігати введені дані в поля форми. Іншими словами,  дані автоматично відобразяться в текстовому полі форми, при повторній спробі вводу, якщо встановлено значення <kbd>on</kbd>.</li>
+<li>Прапорець <kbd>multiple="multiple"</kbd> &ndash;  дозволяє вибрати більше одного значення зі списку.</li>
+<li>Атрибут <kbd>min="6"</kbd> &ndash;  встановлює  мінімально допустиму кількість символів, що вводятьсяв. </li>
+<li>Атрибут <kbd>max="20"</kbd> &ndash;  встановлює  максимально допустиму кількість символів, що вводяться. </li>
+<li>Атрибут <kbd>maxlength="30"</kbd> &ndash;  встановлює  максимально допустиму кількість символів, що вводяться в текстове поле. </li>
+<li>Атрибут <kbd>height=""</kbd> &ndash;   визначає висоту поля в пікселях або відсотках. </li>
+<li>Атрибут <kbd>width=""</kbd> &ndash;   визначає ширину поля в пікселях або в відсотках. </li>
+<li>Атрибут <kbd>form="ім'я форми"</kbd> &ndash;  вказує ім'я форми, якій належить елемент <kbd>&lt;input /></kbd>.</li>
+ <li>Атрибут <kbd>formmethod=""</kbd> зв значеннями <kbd>get,
+post,
+put,
+delete</kbd>   &ndash;   визначає метод відсилання даних на обробку по визначеному url. Має перевагу перед атрибутом <kbd>method=""</kbd> тега 
+<kbd>&lt;form></kbd>.</li>
+
+<li>Атрибут <kbd>formaction="url"</kbd>     &ndash;   визначає   url, за яким буде відіслано дані. Має перевагу над атрибутом <kbd>action=""</kbd> тега 
+<kbd>&lt;form></kbd>.</li>
+
+ <li>Атрибут <kbd>list=""</kbd> &ndash; дивіться <a href="datalist.htm" class="ssilka">теги <kbd>&lt;datalist> &lt;/datalist></kbd></a>.</li>
+
+
+</ul>
+ 
+  <p>Додатково дивіться <a href="form.htm" class="ssilka4">HTML форми</a>.</p>
+
+</body>
+</html>

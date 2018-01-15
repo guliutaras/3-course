@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>HTML 5 теги &lt;datalist> &lt;/datalist> - допустимі значення при введненні даних</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+<h1>HTML 5 теги, що визначають деякі допустимі значення </h1>
+              
+              <p class="p2">Теги &lt;datalist> &lt;/datalist></p>
+  
+  <p>Теги <kbd>&lt;datalist> &lt;/datalist></kbd>  визначають допустимі значення при введенні даних:  
+  </p>
+  <table class="jsexam"><tr><td class="white">
+                 <code>                
+                 &lt;!DOCTYPE HTML><br />
+&lt;html><br />
+&lt;body><br />
+&lt;input list="computers" /><br />
+&lt;datalist id="computers"><br />
+	&lt;option value="sony" /><br />
+	&lt;option value="toshiba" /><br />
+	&lt;option value="asus" /><br />
+    &lt;option value="acer" /><br />
+&lt;/datalist><br />
+
+&lt;/body><br />
+&lt;/html><br />
+         </code></td></tr></table>
+         
+        
+  <p>Результат:</p> 
+   
+   <p> <input list="computers" />
+<datalist id="computers">
+<option value="sony" />
+<option value="toshiba" />
+<option value="asus" />
+<option value="acer" />
+</datalist> </p>
+  
+  <p>Теги  <kbd>&lt;datalist> &lt;/datalist></kbd>, З обов'язковими в даному випадку <kbd>&lt;option /></kbd>, не видимі в браузері, вони лише визначають допустимі значення при введенні даних  за допоиогою  елемента <kbd>&lt;input /></kbd>. Атрибут <kbd>list=""</kbd>  тега    <kbd>&lt;input /></kbd> вказує на функціональний зв'язок між групою  тегів.</p>
+  <p> Теги  <kbd>&lt;datalist> &lt;/datalist></kbd> вперше представлені в специфікації <b>HTML 5</b>. </p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Формы. Технология клиент-сервер</title>
+<script src="Script.js"></script>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script>
+function Click(ob){
+ var o = ob.nextSibling;
+ while(o.nodeType!=1) o=o.nextSibling;
+ if(o.style.display!="block"){o.style.display="block";ob.style.cursor="pointer";}else{o.style.display="none";ob.style.cursor="help";}
+}
+function Open(ob){
+ var o = ob.nextSibling;
+ while(o.nodeType!=1) o=o.nextSibling;
+ var t=window.open('','New','height=200,width=200,location=no,menubar=no,scrollbars=no',false);
+ t.document.open();
+ t.document.write(o.innerHTML);
+ t.document.close();
+}
+</script>
+<style type="text/css" />
+H2 {margin-left:2em}
+H3 {margin-left:3em}
+H4 {margin-left:4em}
+@media screen{
+ H1:hover {color:red; cursor:pointer}
+ .show {color:darkred;cursor:help}
+ XMP,DIV {display:none}
+ DIV XMP {display:block}
+ CODE,PRE,XMP {color:darkblue}	
+}
+ @page:first {<li>margin: 1cm;}
+ @page:left {<li>margin: 1cm 3cm 1cm 1.5cm;}
+ @page:right {<li>margin: 1cm 3cm 1cm 1.5cm;}
+</style>
+</head>
+<body>
+
+<h2></h2>
+
+
+
+<hr width="40%" align="center">
+</body>
+</html>

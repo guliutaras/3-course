@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html>
+<!-- http://javascript.ru/manual -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Краткий справочник javascript</title>
+<script>
+function Click(ob){
+ var o = ob.nextSibling;
+ while(o.nodeType!=1) o=o.nextSibling;
+ if(o.style.display!="block"){o.style.display="block";ob.style.cursor="pointer";}else{o.style.display="none";ob.style.cursor="help";}
+}
+function Clik(ob,ws){
+ var o = ob.nextSibling, s='', p, t, w=eval(ws);
+ while(o.nodeType!=1) o=o.nextSibling;
+ if(o.style.display!="block"){
+   for(p in w){
+     try{t=typeof(w[p])}catch(_e){t=''}
+     if(p=='Click' || p=='Clik' || /^\d+$/.test(p)) continue;
+     if(t=='object')
+       s+="<span class=show onclick=Clik(this,"+"'"+ws+"[\""+p+"\"]'"+")>"+p+"\t"+t+"</span><pre id=s></pre><br>";
+     else
+       s+=p+"\t"+t+"<br>";
+   }
+   if(s){o.innerHTML=s; o.style.display='block';ob.style.cursor="pointer";}else ob.style.cursor="text";
+ }else{o.style.display="none";ob.style.cursor="help";}
+}
+</script>
+<style type="text/css" />
+H1 {margin-left:1cm}
+H2 {margin-left:2cm}
+H3 {margin-left:3cm}
+H4 {margin-left:4cm}
+H5 {margin-left:5cm}
+H6 {margin-left:6cm}
+@media screen {
+H1:hover {color:red; cursor:pointer}
+.show {color:darkblue;cursor:help}
+DIV .show {color:green}
+#PP,DIV,TABLE,PRE {display:none}
+DIV DIV PRE {display:block}
+span.show {color:darkblue;cursor:pointer}
+PRE#s {position:relative;left:2em;display:none;width:36em;margin-top:0mm}
+}
+@media print {
+#PP,DIV,TABLE,PRE {display:block}
+PRE#s {position:relative;left:2em;display:block;width:36em;margin-top:0mm}
+}
+</style>
+</head>
+<body>
+<h1>Краткий справочник javascript</h1>
+
+<h2 class="show" onclick="Click(this)">Константы</h2>
+<div>
+<h4 class="show" onclick="Click(this)">Числа</h4>
+<div><code>1  -5  3.14  1E-2 1.2E2 </code></div>
+<h4 class="show" onclick="Click(this)">Строки</h4>
+<div><code>"This is string"  'Привет'  ""</code></div>
+<h4 class="show" onclick="Click(this)">Логические значения</h4>
+<div><code>true  false</code></div>
+</div>
+
+<h2 class="show" onclick="Click(this)">Операторы</h2>
+<div>
+<h4 class="show" onclick="Click(this)">delete</h4>
+<div>delete expression</div>
+<h4 class="show" onclick="Click(this)">function</h4>
+<div>
+<pre>function [functionname]([arg1 [, arg2 [,...[, argN]]]]){
+      statements
+}</pre>
+</div>
+<h4 class="show" onclick="Click(this)">in</h4>
+<div><code>for(property in object) ...</code></div>
+<h4 class="show" onclick="Click(this)">instanceof</h4>
+<div></div>
+<h4 class="show" onclick="Click(this)">new</h4>
+<div><code>newObj = new Object()</code></div>
+<h4 class="show" onclick="Click(this)">this</h4>
+<div>Ссылка на даный объект.</div>
+<h4 class="show" onclick="Click(this)">typeof</h4>
+<div> 
+<code>typeof[(]expression[)]</code><br>
+Возможные значения: "number," "string," "boolean," "object," "function," and "undefined" 
+</div>
+<h4 class="show" onclick="Click(this)">void</h4>
+<div> 
+<code>void expression</code><br>
+Предотвращает возвращение значения данного выражения.
+</div>
+<h4 class="show" onclick="Click(this)">Аксессоры</h4>
+<div></div>
+<h4 class="show" onclick="Click(this)">Арифметические операторы</h4>
+<table>
+<tbody><tr>
+<th align="left" width="15%">Operator</th>
+<th align="left" width="40%">Description</th>
+<th align="left" width="20%">Example</th>
+<th colspan="2" align="left" width="25%">Result</th>
+</tr>
+<tr>
+<td valign="top">+</td>
+<td valign="top">Addition</td>
+<td valign="top">x=y+2</td>
+<td valign="top">x=7</td>
+<td valign="top">y=5</td>
+</tr>
+<tr>
+<td valign="top">-</td>
+<td valign="top">Subtraction</td>
+<td valign="top">x=y-2</td>
+<td valign="top">x=3</td>
+<td valign="top">y=5</td>
+</tr>
+<tr>
+<td valign="top">*</td>
+<td valign="top">Multiplication</td>
+<td valign="top">x=y*2</td>
+<td valign="top">x=10</td>
+<td valign="top">y=5</td>
+</tr>
+<tr>
+<td valign="top">/</td>
+<td valign="top">Division</td>
+<td valign="top">x=y/2</td>
+<td valign="top">x=2.5</td>
+<td valign="top">y=5</td>
+</tr>
+<tr>
+<td valign="top">%</td>
+<td valign="top">Modulus (division remainder)</td>
+<td valign="top">x=y%2</td>
+<td valign="top">x=1</td>
+<td valign="top">y=5</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top">++</td>
+<td rowspan="2" valign="top">Increment</td>
+<td valign="top">x=++y</td>
+<td valign="top">x=6</td>
+<td valign="top">y=6</td>
+</tr>
+<tr>
+<td valign="top">x=y++</td>
+<td valign="top">x=5</td>
+<td valign="top">y=6</td>
+</tr>
+<tr>
+<td rowspan="2" valign="top">--</td>
+<td rowspan="2" valign="top">Decrement</td>
+<td valign="top">x=--y</td>
+<td valign="top">x=4</td>
+<td valign="top">y=4</td>
+</tr>
+<tr>
+<td valign="top">x=y--</td>
+<td valign="top">x=5</td>
+<td valign="top">y=4</td>
+</tr>
+</tbody>
+</table>
+
+<h4 class="show" onclick="Click(this)">Запятая</h4>
+<div>
+<code>выражение1,выражение2</code><br>
+Оператор <code> , </code> выполняет все выражения слева направо и возвращает значение правого выражения.
+</div>
+
+<h4 class="show" onclick="Click(this)">Логические операторы</h4>
+<table>
+<tr>
+<th align="left" width="15%">Operator</th>
+<th align="left" width="45%">Description</th>
+<th align="left" width="40%">Example</th>
+</tr>
+<tr>
+<td valign="top">&amp;&amp;</td>
+<td valign="top">and</td>
+<td valign="top"> (x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
+</tr>
+<tr>
+<td valign="top">||</td>
+<td valign="top">or</td>
+<td valign="top">(x==5 || y==5) is false</td>
+</tr>
+<tr>
+<td valign="top">!</td>
+<td valign="top">not</td>
+<td valign="top"> !(x==y) is true</td>
+</tr>
+</table>
+
+<h4 class="show" onclick="Click(this)">Операторы присваивания</h4>
+<table>
+<tr>
+<th align="left" width="15%">Operator</th>
+<th align="left" width="40%">Example</th>
+<th align="left" width="25%">Same As</th>
+<th align="left" width="20%">Result</th>
+</tr>
+<tr>
+<td valign="top">=</td>
+<td valign="top">x=y</td>
+<td valign="top">&nbsp;</td>
+<td valign="top">x=5</td>
+</tr>
+<tr>
+<td valign="top">+=</td>
+<td valign="top">x+=y</td>
+<td valign="top">x=x+y</td>
+<td valign="top">x=15</td>
+</tr>
+<tr>
+<td valign="top">-=</td>
+<td valign="top">x-=y</td>
+<td valign="top">x=x-y</td>
+<td valign="top">x=5</td>
+</tr>
+<tr>
+<td valign="top">*=</td>
+<td valign="top">x*=y</td>
+<td valign="top">x=x*y</td>
+<td valign="top">x=50</td>
+</tr>
+<tr>
+<td valign="top">/=</td>
+<td valign="top">x/=y</td>
+<td valign="top">x=x/y</td>
+<td valign="top">x=2</td>
+</tr>
+<tr>
+<td valign="top">%=</td>
+<td valign="top">x%=y</td>
+<td valign="top">x=x%y</td>
+<td valign="top">x=0</td>
+</tr>
+</table>
+
+<h4 class="show" onclick="Click(this)">Операторы сравнения</h4>
+<table>
+<tr>
+<th align="left" width="15%">Operator</th>
+<th align="left" width="45%">Description</th>
+<th align="left" width="40%">Example</th>
+</tr>
+<tr>
+<td valign="top">==</td>
+<td valign="top">is equal to
+</td>
+<td valign="top">x==8 is false<br>
+x==5 is true
+
+</td>
+</tr>
+<tr>
+<td valign="top">===</td>
+<td valign="top">is exactly equal to (value and type)</td>
+<td valign="top">x===5 is true<br>
+x==="5" is false</td>
+</tr>
+<tr>
+<td valign="top">!=</td>
+<td valign="top">is not equal</td>
+<td valign="top">x!=8 is true</td>
+</tr>
+<tr>
+<td valign="top">&gt;</td>
+<td valign="top">is greater than</td>
+<td valign="top">x&gt;8 is false</td>
+</tr>
+<tr>
+<td valign="top">&lt;</td>
+<td valign="top">is less than</td>
+<td valign="top">x&lt;8 is true</td>
+</tr>
+<tr>
+<td valign="top">&gt;=</td>
+<td valign="top">is greater than or equal to</td>
+<td valign="top">x&gt;=8 is false</td>
+</tr>
+<tr>
+<td valign="top">&lt;=</td>
+<td valign="top">is less than or equal to</td>
+<td valign="top">x&lt;=8 is true</td>
+</tr>
+</table>
+
+<h4 class="show" onclick="Click(this)">Побитовые операторы</h4>
+<table>
+<tr>
+<th align="left" width="15%">Operator</th>
+<th align="left" width="45%">Description</th>
+<th align="left" width="40%">Example</th>
+</tr>
+<tr><td valign="top">&amp;</td><td valign="top">bitwise AND</td><td valign="top">1^3 = 1</td></tr>
+<tr><td valign="top">|</td><td valign="top">bitwise OR</td><td valign="top">1^3 = 3</td></tr>
+<tr><td valign="top">^</td><td valign="top">bitwise XOR</td><td valign="top">1^3 = 2</td></tr>
+</table>
+
+<h4 class="show" onclick="Click(this)">Строковые операторы</h4>
+<div>
+Оператор <code>+</code> используется также для конкатенации (сцепления) 
+</div>
+
+<h4 class="show" onclick="Click(this)">Условный оператор</h4>
+<div>
+<code> x = a>b ? 1 : 2;</code>
+<p>Если <code>a>b</code> то <code> x = 1</code> иначе <code> x = 2</code></p>
+</div>
+</div>
+
+<h2 class="show" onclick="Click(this)">Синтаксические конструкции</h2>
+<div>
+<h4 class="show" onclick="Click(this)">break</h4>
+<div>
+ 
+break [label];
+while, for, for...in, or do...while  
+
+</div>
+<h4 class="show" onclick="Click(this)">continue</h4>
+<div>
+ 
+continue [label];
+while, for, for...in, or do...while  
+
+</div>
+<h4 class="show" onclick="Click(this)">do..while</h4>
+<div>do
+   statement
+while (expression);</div>
+<h4 class="show" onclick="Click(this)">for</h4>
+<pre>for (initialization; test; increment)
+      statement
+</pre>
+<h4 class="show" onclick="Click(this)">for..in</h4>
+<div>for (variable in [object | array])
+      statement</div>
+<h4 class="show" onclick="Click(this)">function</h4>
+<pre>function [functionname]([arg1 [, arg2 [,...[, argN]]]]){
+      statements
+} 
+</pre>
+<h4 class="show" onclick="Click(this)">if</h4>
+<pre>if (condition)
+      statement1
+[else
+      statement2]</pre>
+<h4 class="show" onclick="Click(this)">label</h4>
+<pre>  label:
+         statement</pre>
+<h4 class="show" onclick="Click(this)">return</h4>
+<pre>return [expression]</pre>
+<h4 class="show" onclick="Click(this)">switch</h4>
+<pre>switch (expression) {
+      case label :
+              statementlist
+      case label :
+              statementlist
+   ...
+      default :
+              statementlist
+}</pre>
+<h4 class="show" onclick="Click(this)">throw</h4>
+<pre> throw "x equals zero";   </pre>
+<h4 class="show" onclick="Click(this)">try..catch</h4>
+<pre>try {
+      tryStatements}
+catch(exception){
+      catchStatements}
+[finally {
+      finallyStatements} ]
+</pre>
+<h4 class="show" onclick="Click(this)">var</h4>
+<pre>var variable1 [ = value1 ] [, variable2 [ = value2], ...] </pre>
+<h4 class="show" onclick="Click(this)">while</h4>
+<pre>while (expression)
+      statement</pre>
+<h4 class="show" onclick="Click(this)">with</h4>
+<pre>with (object)
+      statement</pre>
+<h4 class="show" onclick="Click(this)">Блок</h4>
+<div>
+<code>{ оператор1; оператор2; ... }</code><br>
+Блок рассматривается как один оператор.
+</div>
+</div>
+
+
+<h2 class="show" onclick="Click(this)">Стандартные объекты JavaScript</h2>
+<div>
+<h4 class="show" onclick="Click(this)">Array</h4>
+<div>
+Массив пронумерованных элементов, также может служить стеком или очередью. Для ассоциативных массивов используйте <code>Object</code>.
+<pre>
+var arr=new Array()   	// пустой массив
+var arr=new Array(10) 	// массив из 10 элементов
+var arr=new Array(1,5)	// массив из двух элементов
+var arr = []			// пустой массив
+var arr = [1,5,'12',25]	// массив из четырех элементов
+</pre>
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<pre id="PP">
+push([item1 [item2 [. . . [itemN ]]]])
+shift()
+join(separator)
+concat([item1[, item2[, . . . [, itemN]]]]) 
+splice(start, deleteCount, [item1[, item2[, . . . [,itemN]]]])
+pop()
+unshift([item1[, item2 [, . . . [, itemN]]]])
+slice(start, [end]) 
+reverse()
+sort(sortFunction)
+</pre>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<pre id="PP">
+index
+input
+length
+prototype
+</pre>
+</div>
+<h4 class="show" onclick="Click(this)">Boolean</h4>
+<div><pre>
+b = new Boolean(value)
+</pre>Если аргумент не указан или равен: 0, -0, null, false, NaN, undefined, ""
+то объект инициализуется как false. Все остальные значения, включая объекты создают объект с начальным значением true.
+Практически не используется.
+</div>
+<h4 class="show" onclick="Click(this)">Date</h4>
+<div>
+<pre>dateObj = new Date()
+dateObj = new Date(dateVal)
+dateObj = new Date(year, month, date[, hours, minutes, seconds, ms] )
+</pre>
+Дата измеряется в миллисекундах, начиная от полуночи 01 января 1970 года GMT+0. День содержит 86,400,000 миллисекунд.
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<pre id="PP">
+Date.parse()
+toLocaleString()
+getDate()
+getDay()
+getFullYear()
+getMilliseconds()
+getMinutes()
+getSeconds()
+getTimezoneOffset()
+getUTCDate()
+getUTCDay()
+getUTCHours()
+getHours()
+getUTCMilliseconds()
+getUTCMinutes()
+getUTCSeconds()
+setSeconds(numSeconds[, numMilli]) 
+setFullYear()
+setMilliseconds()
+setTime()
+setYear(numYear)
+setDate(numDate)
+setUTCDate()
+setUTCHours()
+setHours()
+setUTCMilliseconds()
+setUTCMinutes()
+setMinutes(numMinutes[, numSeconds[, numMilli]]) 
+setMonth(numMonth[, dateVal]) 
+setUTCSeconds()
+setUTCFullYear
+setUTCMonth()
+toGMTString()
+toLocaleFormat()
+toLocaleTimeString()
+toLocaleDateString()
+toString()
+toTimeString()
+toDateString()
+toUTCString()
+getUTCFullYear()
+getMonth()
+Date.UTC()
+getUTCMonth()
+getTime()
+valueOf()
+getYear()
+</pre>
+</div>
+<h4 class="show" onclick="Click(this)">Error</h4>
+<div>Ошибки выполнения приводят к генерации исключений в виде объектов Error.
+Существуют следующие базовые подклассы Error:
+<pre>
+EvalError	    Ошибка при выполнении eval()
+RangeError		Эта ошибка происходит, когда переданный параметр лежит за границами допустимого диапазона
+ReferenceError	Ошибка при разыменовании неверной ссылки
+SyntaxError		Синтаксическая ошибка, которая произошла при разборе кода, переданного eval()
+TypeError		Переменная или параметр неправильного типа
+URIError		Ошибка происходит, когда encodeURI() или decodeURI() вызваны с неправильными параметрами 
+</pre>
+Пример:
+<pre>
+try {   eval(someThing)
+	} catch (e) {
+	    if (e.instanceof(EvalError)) {
+	        alert("Ошибка при выполнении: " + e.message);
+	    } else {
+	        throw(e)
+	    }
+	}
+</pre>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<pre id="PP">
+message
+name
+description
+number
+</pre>
+</div>
+
+<h4 class="show" onclick="Click(this)">Function</h4>
+<div>
+<pre>new Function ([arg1[, arg2[, ... argN]],] functionBody)</pre>
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<pre id="PP">
+call
+apply
+</pre>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<pre id="PP">
+arguments[n]
+caller 
+length
+</pre>
+</div>
+<h4 class="show" onclick="Click(this)">Math</h4>
+<div>В отличие от других глобальных объектов, Math не является конструктором. Все свойства и методы Math статичны.
+
+Вы можете обратиться к константе <i>&pi;</i> как Math.PI или вызвать функцию Math.floor как Math.floor(x). Все константы определены с максимально возможной в яваскрипт точностью (double).
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<pre id="PP">
+Math.abs(x)	Math.acos(x)	Math.asin(x)	Math.atan(x)	Math.atan2(y,x)	Math.cos(x)
+Math.sin(x)	Math.exp(x)	Math.max(x,y,...)	Math.min(x,y,...)	Math.random()	Math.sqrt(x)
+Math.tan(x)	Math.log(x)	Math.pow(x,a)	Math.round(n)	Math.floor(x)	Math.ceil(x)
+</pre>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<pre id="PP">
+Math.E		Math.LN2	Math.LOG2E		Math.LOG10E
+Math.PI		Math.SQRT12	Math.SQRT2		Math.LN10</pre>
+</div>
+<h4 class="show" onclick="Click(this)">Number</h4>
+<div>
+<pre>
+numObj = Number(value)
+</pre>
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<pre id="PP">
+toExponential([fractionDigits])
+toString([radix])
+toPrecision([precision])
+toFixed([fractionDigits])
+</pre>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<pre id="PP">
+Number.MAX_VALUE
+Number.MIN_VALUE
+Number.NaN
+Number.NEGATIVE_INFINITY
+Number.POSITIVE_INFINITY
+</pre>
+</div>
+<h4 class="show" onclick="Click(this)">Object</h4>
+<div>
+<pre>
+obj = new Object( [value] )
+// или, более часто
+obj = { key1: val1, key2: val2, ...	}
+</pre>
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<pre id="PP">
+toString()
+isPrototypeOf(object2)
+hasOwnProperty(proName)
+</pre>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<pre id="PP">
+prototype
+constructor
+propertyIsEnumerable(proName)
+</pre>
+</div>
+
+<h4 class="show" onclick="Click(this)">RegExp</h4>
+<div>
+<pre>
+var expr = new RegExp(pattern [, flags]);
+// сокращенная форма записи (литеральный формат)
+var expr = /pattern/flags;
+
+pattern		    Шаблон поиска (текст регулярного выражения).
+flags			Способы поиска по шаблону:
+        g — глобальный поиск (обрабатываются все совпадения с шаблоном поиска);
+        i — не различать строчные и заглавные буквы;
+        m — многострочный поиск.
+</pre>
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<table class="reference" border="1" cellpadding="0" cellspacing="0">
+  <tr>
+    <th>Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="met_win_alert.asp">test()</a></td>
+    <td>The test() method searches a string for a specified value, and returns true or false, depending on the result.</td>
+  </tr>
+  <tr>
+    <td><a href="met_win_alert.asp">exec(str)</a></td>
+    <td>The exec() method searches a string for a specified value, and returns the text of the found value. If no match is found, it returns null.</td>
+  </tr>
+  <tr>
+    <td><a href="met_win_alert.asp">compile(pattern, [flags])</a></td>
+    <td>Compiles a regular expression.</td>
+  </tr>
+</table>
+<h5 class="show" onclick="Click(this)">Метасимволы</h5>
+<table>
+<tr>
+    <th align="left" width="22%">Metacharacter</th>
+    <th align="left" width="78%">Description</th>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_dot.asp">.</a></td>
+    <td>Find a single character, except newline or line terminator</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_wordchar.asp">\w</a></td>
+    <td>Find a word character</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_wordchar_non.asp">\W</a></td>
+    <td>Find a non-word character</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_digit.asp">\d</a></td>
+    <td>Find a digit</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_digit_non.asp">\D</a></td>
+    <td>Find a non-digit character</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_whitespace.asp">\s</a></td>
+    <td>Find a whitespace character</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_whitespace_non.asp">\S</a></td>
+    <td>Find a non-whitespace character</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_begin.asp">\b</a></td>
+    <td>Find a match at the beginning/end of a word</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_begin_not.asp">\B</a></td>
+    <td>Find a match not at the beginning/end of a word</td>
+  </tr>
+	<tr>
+    <td>\0</td>
+    <td>Find a NUL character</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_newline.asp">\n</a></td>
+    <td>Find a new line character</td>
+  </tr>
+	<tr>
+    <td>\f</td>
+    <td>Find a form feed character</td>
+  </tr>
+	<tr>
+    <td>\r</td>
+    <td>Find a carriage return character</td>
+  </tr>
+	<tr>
+    <td>\t</td>
+    <td>Find a tab character</td>
+  </tr>
+	<tr>
+    <td>\v</td>
+    <td>Find a vertical tab character</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_octal.asp">\xxx</a></td>
+    <td>Find the character specified by an octal number xxx</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_hex.asp">\xdd</a></td>
+    <td>Find the character specified by a hexadecimal number dd</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_unicode_hex.asp">\uxxxx</a></td>
+    <td>Find the Unicode character specified by a hexadecimal number xxxx</td>
+  </tr>
+</table>  
+<h5 class="show" onclick="Click(this)">Повторения</h5>
+<table>
+<tr>
+    <th align="left" width="22%">Quantifier</th>
+    <th align="left" width="78%">Description</th>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_onemore.asp">n+</a></td>
+    <td>Matches any string that contains at least one n</td>
+
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_zeromore.asp">n*</a></td>
+    <td>Matches any string that contains zero or more occurrences of n</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_zeroone.asp">n?</a></td>
+
+    <td>Matches any string that contains zero or one occurrences of n</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_nx.asp">n{X}</a></td>
+    <td>Matches any string that contains a sequence of <i>X</i> <i>n</i>'s</td>
+
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_nxy.asp">n{X,Y}</a></td>
+    <td>Matches any string that contains a sequence of X to Y <i>n</i>'s</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_nxcomma.asp">n{X,}</a></td>
+
+    <td>Matches any string that contains a sequence of at least X <i>n</i>'s</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_ndollar.asp">n$</a></td>
+    <td>Matches any string with n at the end of it</td>
+  </tr>
+
+	<tr>
+    <td><a href="jsref_regexp_ncaret.asp">^n</a></td>
+    <td>Matches any string with n at the beginning of it</td>
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_nfollow.asp">?=n</a></td>
+    <td>Matches any string that is followed 
+	by a specific string n</td>
+
+  </tr>
+	<tr>
+    <td><a href="jsref_regexp_nfollow_not.asp">?!n</a></td>
+    <td>Matches any string that is not followed 
+	by a specific string n</td>
+  </tr>
+</table>  
+</div>
+<h4 class="show" onclick="Click(this)">String</h4>
+<div>
+<pre>
+a = 'my string'
+b = new String("object") // синтаксис устарел и не используется
+c = String(object)
+</pre>
+Можно использовать любую группу знаков Юникода.
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<pre id="PP">
+split([separator[, limit]])			
+charCodeAt(index)		
+String.fromCharCode([code1[, code2[, ...[, codeN]]]]) 		
+charAt(index)
+concat([string2[, string3[, . . . [, stringN]]]])			
+lastIndexOf(substring[, startindex])		
+search(rgExp)					
+match(rgExp)
+replace(rgExp, replaceText)			
+toLowerCase()		
+toUpperCase()				
+toLocaleLowerCase()
+toLocaleUpperCase		
+toString()	valueOf()		
+substring(start, end)
+slice(start, [end]) 			
+indexOf(subString[, startIndex])			
+substr(start [, length ]) 
+</pre>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<pre id="PP">
+length
+</pre></div>
+</div>
+
+<h2 class="show" onclick="Click(this)">Глобальные методы</h2>
+<div>
+<h4 class="show" onclick="Click(this)">decodeURI</h4>
+<div><code>str=decodeURI(URIstring)</code></div>
+<h4 class="show" onclick="Click(this)">decodeURIComponent</h4>
+<div><code>str=decodeURIComponent(URIstring)</code></div>
+<h4 class="show" onclick="Click(this)">encodeURI</h4>
+<div><code>str=encodeURI(URIstring)</code></div>
+<h4 class="show" onclick="Click(this)">encodeURIComponent</h4>
+<div><code>str=encodeURIComponent(URIstring)</code></div>
+<h4 class="show" onclick="Click(this)">escape</h4>
+<div><code>str=escape(charString)</code></div>
+<h4 class="show" onclick="Click(this)">eval</h4>
+<div><code>eval(codeStr)</code> Выполняет строку кода, может использовать переменные и свойства существующих объектов, возвращает значение последнего вычисленного выражения.</div>
+<h4 class="show" onclick="Click(this)">isFinite</h4>
+<div><code>isFinite(number)?true:false</code></div>
+<h4 class="show" onclick="Click(this)">isNaN</h4>
+<div><code>isNaN(numValue)</code></div>
+<h4 class="show" onclick="Click(this)">parseFloat</h4>
+<div><code>x=parseFloat(str)</code></div>
+<h4 class="show" onclick="Click(this)">parseInt</h4>
+<div><code>n=parseInt(str)</code></div>
+<h4 class="show" onclick="Click(this)">unescape</h4>
+<div><code>str=escape(charString)</code></div>
+</div>
+
+<h2 class="show" onclick="Click(this)">Глобальные свойства</h2>
+<div>
+<h4 class="show" onclick="Click(this)">Infinity</h4>
+<div><code>x=1/0  // x==Infinity</code></div>
+<h4 class="show" onclick="Click(this)">NaN</h4>
+<div><code>x=Math.sqrt(-1)  // x==NaN</code></div>
+<h4 class="show" onclick="Click(this)">undefined</h4>
+<div><code>if(typeof(notDeclared)==undefinded) ...</code></div>
+</div>
+
+
+<h2 class="show" onclick="Click(this)">Объекты браузера</h2>
+<div>
+<h4 class="show" onclick="Click(this)">window</h4>
+<div>
+Этот объект представляет открытое окно браузера.
+
+<h5 class="show" onclick="Click(this)">Объекты</h5>
+<div>
+<pre>
+WebSocket           //  ws = new WebSocket("ws://www.site.com/demo")
+XMLHttpRequest      //  http = new XMLHttpRequest()
+</pre>
+</div>
+
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<table class="reference" border="1" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <th>Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a href="met_win_alert.asp">alert(message)</a></td>
+    <td>Displays an alert box with a message and an OK button</td>
+  </tr>
+  <tr>
+    <td><a href="met_win_blur.asp">blur()</a></td>
+    <td>Removes focus from the current window</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_clearinterval.asp">clearInterval()</a></td>
+    <td>Clears a timer set with setInterval()</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_cleartimeout.asp">clearTimeout()</a></td>
+    <td>Clears a timer set with setTimeout()</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_close.asp">close()</a></td>
+    <td>Closes the current window</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_confirm.asp">confirm(message)</a></td>
+    <td>Displays a dialog box with a message and an OK and a Cancel button</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_createpopup.asp">createPopup()</a></td>
+    <td>Creates a pop-up window</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_focus.asp">focus()</a></td>
+    <td>Sets focus to the current window</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_moveby.asp">moveBy()</a></td>
+    <td>Moves a window relative to its current position</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_moveto.asp">moveTo()</a></td>
+    <td>Moves a window to the specified position</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_open.asp">open()</a></td>
+    <td>Opens a new browser window</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_open.asp">openDialog()</a></td>
+    <td>Opens a new dialog window</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_print.asp">print()</a></td>
+    <td>Prints the content of the current window</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_prompt.asp">prompt(message,default)</a></td>
+    <td>Displays a dialog box that prompts the visitor for input</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_resizeby.asp">resizeBy()</a></td>
+    <td>Resizes the window by the specified pixels</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_resizeto.asp">resizeTo()</a></td>
+    <td>Resizes the window to the specified width and height</td>
+    </tr>
+  <tr>
+    <td>scroll()</td>
+    <td>&nbsp;</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_scrollby.asp">scrollBy()</a></td>
+    <td>Scrolls the content by the specified number of pixels</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_scrollto.asp">scrollTo()</a></td>
+    <td>Scrolls the content to the specified coordinates</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_setinterval.asp">setInterval()</a></td>
+    <td>Calls a function or evaluates an expression at specified intervals (in 
+	milliseconds)</td>
+    </tr>
+  <tr>
+    <td><a href="met_win_settimeout.asp">setTimeout()</a></td>
+    <td>Calls a function or evaluates an expression after a specified number of 
+	milliseconds</td>
+    </tr>
+ </table>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<table class="reference" border="1" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+    <th align="left" width="20%">Property</th>
+    <th align="left" width="80%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="prop_win_closed.asp">closed</a></td>
+    <td>Returns a Boolean value indicating whether a window has been closed or 	not</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_defaultstatus.asp">defaultStatus</a></td>
+    <td>Sets or returns the default text in the statusbar of a window</td>
+  </tr>
+  <tr>
+    <td><a href="dom_obj_document.asp">document</a></td>
+    <td>Returns the Document object for the window (<a href="dom_obj_document.asp">See Document object</a>)</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_frames.asp">frames</a></td>
+    <td>Returns an array of all the frames (including iframes) in the current window</td>
+  </tr>
+  <tr>
+    <td><a href="obj_history.asp">history</a></td>
+    <td>Returns the History object for the window (<a href="obj_history.asp">See History object</a>)</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_innerheight.asp">innerHeight</a></td>
+    <td>Sets or returns the inner height of a window's content area</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_innerheight.asp">innerWidth</a></td>
+    <td>Sets or returns the inner width of a window's content area</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_length.asp">length</a></td>
+    <td>Returns the number of frames (including iframes) in a window</td>
+  </tr>
+  <tr>
+    <td><a href="obj_location.asp">location</a></td>
+    <td>Returns the Location object for the window (<a href="obj_location.asp">See Location object</a>)</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_name.asp">name</a></td>
+    <td>Sets or returns the name of a window</td>
+  </tr>
+  <tr>
+    <td><a href="obj_navigator.asp">navigator</a></td>
+    <td>Returns the Navigator object for the window (<a href="obj_navigator.asp">See 
+	Navigator object</a>)</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_opener.asp">opener</a></td>
+    <td>Returns a reference to the window that created the window</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_outerheight.asp">outerHeight</a></td>
+    <td>Sets or returns the outer height of a window, including 
+	toolbars/scrollbars</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_outerheight.asp">outerWidth</a></td>
+    <td>Sets or returns the outer width of a window, including 
+	toolbars/scrollbars</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_pagexoffset.asp">pageXOffset</a></td>
+    <td>Returns the pixels the current document has been scrolled (horizontally) 
+	from the upper left corner of the window</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_pagexoffset.asp">pageYOffset</a></td>
+
+    <td>Returns the pixels the current document has been scrolled (vertically) 
+	from the upper left corner of the window</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_parent.asp">parent</a></td>
+    <td>Returns the parent window of the current window</td>
+  </tr>
+  <tr>
+    <td><a href="obj_screen.asp">screen</a></td>
+    <td>Returns the Screen object for the window <a href="obj_screen.asp">(See 
+	Screen object)</a></td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_screenleft.asp">screenLeft</a></td>
+    <td>Returns the x coordinate of the window relative to the screen</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_screenleft.asp">screenTop</a></td>
+    <td>Returns the y coordinate of the window relative to the screen</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_screenx.asp">screenX</a></td>
+    <td>Returns the x coordinate of the window relative to the screen</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_screenx.asp">screenY</a></td>
+    <td>Returns the y coordinate of the window relative to the screen</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_self.asp">self</a></td>
+    <td>Returns the current window</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_status.asp">status</a></td>
+    <td>Sets the text in the statusbar of a window</td>
+  </tr>
+  <tr>
+    <td><a href="prop_win_top.asp">top</a></td>
+    <td>Returns the topmost browser window</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 class="show" onclick="Click(this)">navigator</h4>
+<div>
+Объект navigator содержит информацию о броузере
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<table>
+<tr>
+    <th align="left" width="25%">Method</th>
+    <th align="left" width="75%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="met_nav_javaenabled.asp">javaEnabled()</a></td>
+    <td>Specifies whether or not the browser has Java enabled</td>
+  </tr>
+  <tr>
+    <td><a href="met_nav_taintenabled.asp">taintEnabled()</a></td>
+    <td>Specifies whether or not the browser has data tainting enabled</td>
+    </tr>
+</table>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<table>
+  <tr>
+    <th align="left" width="25%">Property</th>
+    <th align="left" width="75%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="prop_nav_appcodename.asp">appCodeName</a></td>
+    <td>Returns the code name of the browser</td>
+  </tr>
+  <tr>
+    <td><a href="prop_nav_appname.asp">appName</a></td>
+    <td>Returns the name of the browser</td>
+  </tr>
+  <tr>
+    <td><a href="prop_nav_appversion.asp">appVersion</a></td>
+    <td>Returns the version information of the browser</td>
+  </tr>
+  <tr>
+    <td><a href="prop_nav_cookieenabled.asp">cookieEnabled</a></td>
+    <td>Determines whether cookies are enabled 
+    in the browser</td>
+  </tr>
+  <tr>
+    <td><a href="prop_nav_platform.asp">platform</a></td>
+    <td>Returns for which platform the browser is compiled</td>
+  </tr>
+  <tr>
+    <td><a href="prop_nav_useragent.asp">userAgent</a></td>
+    <td>Returns the user-agent header sent by the browser to 
+    the server</td>
+  </tr>
+</table>
+</div>
+
+<h4 class="show" onclick="Click(this)">screen</h4>
+<div>
+Объект screen содержит информацию о свойствах экрана.
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<table>
+<tr>
+    <th align="left" width="20%">Property</th>
+
+    <th align="left" width="80%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="prop_screen_availheight.asp">availHeight</a></td>
+    <td>Returns the height of the screen (excluding the Windows Taskbar)</td>
+  </tr>
+  <tr>
+    <td><a href="prop_screen_availwidth.asp">availWidth</a></td>
+    <td>Returns the width of the screen (excluding the Windows Taskbar)</td>
+  </tr>
+  <tr>
+    <td><a href="prop_screen_colordepth.asp">colorDepth</a></td>
+    <td>Returns the bit depth of the color palette for displaying images</td>
+  </tr>
+  <tr>
+    <td><a href="prop_screen_height.asp">height</a></td>
+    <td>Returns the total height of the screen</td>
+  </tr>
+  <tr>
+    <td><a href="prop_screen_pixeldepth.asp">pixelDepth</a></td>
+    <td>Returns the color resolution (in bits per pixel) of the screen</td>
+  </tr>
+  <tr>
+    <td><a href="prop_screen_width.asp">width</a></td>
+    <td>Returns the total width of the screen</td>
+  </tr>
+</table>
+</div>
+
+<h4 class="show" onclick="Click(this)">history</h4>
+<div>
+Этот объект содержит информацию об истории посещений.
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<table>
+<tr>
+    <th align="left" width="20%">Method</th>
+    <th align="left" width="80%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="met_his_back.asp">back()</a></td>
+    <td>Loads the previous URL in the history list</td>
+    </tr>
+  <tr>
+    <td><a href="met_his_forward.asp">forward()</a></td>
+    <td>Loads the next URL in the history list</td>
+    </tr>
+  <tr>
+    <td><a href="met_his_go.asp">go()</a></td>
+    <td>Loads a specific URL from the history list</td>
+    </tr>
+</table>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<table>
+<tr>
+    <th align="left" width="20%">Property</th>
+    <th align="left" width="80%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="prop_his_length.asp">length</a></td>
+    <td>Returns the number of URLs in the history list</td>
+  </tr>
+</table>
+</div>
+
+<h4 class="show" onclick="Click(this)">location</h4>
+<div>
+Этот объект содержит информацию о текущем URL.
+<h5 class="show" onclick="Click(this)">Методы</h5>
+<table>
+<tr>
+    <th align="left" width="20%">Method</th>
+    <th align="left" width="80%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="met_loc_assign.asp">assign()</a></td>
+    <td>Loads a new document</td>
+  </tr>
+  <tr>
+    <td><a href="met_loc_reload.asp">reload()</a></td>
+    <td>Reloads the current document</td>
+    </tr>
+  <tr>
+    <td><a href="met_loc_replace.asp">replace()</a></td>
+    <td>Replaces the current document with a new one</td>
+    </tr>
+</table>
+<h5 class="show" onclick="Click(this)">Свойства</h5>
+<table>
+<tr>
+    <th align="left" width="20%">Property</th>
+    <th align="left" width="80%">Description</th>
+  </tr>
+  <tr>
+    <td><a href="prop_loc_hash.asp">hash</a></td>
+    <td>Returns the anchor portion of a URL</td>
+  </tr>
+  <tr>
+    <td><a href="prop_loc_host.asp">host</a></td>
+    <td>Returns the hostname and port of a URL</td>
+  </tr>
+  <tr>
+    <td><a href="prop_loc_hostname.asp">hostname</a></td>
+    <td>Returns the hostname of a URL</td>
+  </tr>
+  <tr>
+    <td><a href="prop_loc_href.asp">href</a></td>
+    <td>Returns the entire URL</td>
+  </tr>
+  <tr>
+    <td><a href="prop_loc_pathname.asp">pathname</a></td>
+    <td>Returns the path name of a URL</td>
+  </tr>
+  <tr>
+    <td><a href="prop_loc_port.asp">port</a></td>
+    <td>Returns the port number the server uses for a URL</td>
+  </tr>
+  <tr>
+    <td><a href="prop_loc_protocol.asp">protocol</a></td>
+    <td>Returns the protocol of a URL</td>
+  </tr>
+  <tr>
+    <td><a href="prop_loc_search.asp">search</a></td>
+    <td>Returns the query portion of a URL</td>
+  </tr>
+</table>
+</div>
+</div>
+
+<h3 class=show onclick="Clik(this,'window')">Проверь объект window в браузере</h3>
+<pre id=s></pre>
+
+
+</body>
+</html>
